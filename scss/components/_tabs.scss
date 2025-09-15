@@ -1,0 +1,149 @@
+@use 'sass:color';
+@use 'sass:math';
+@use 'sass:map';
+@use '../variable' as *; //變數
+@use '../basic/mixin' as *; //mixin
+
+.tabSet {
+  display: flex;
+  flex-direction: column;
+
+  .tabBtnBox {
+    // overflow-x: auto;
+    display: flex;
+  }
+
+  .tabItems {
+    // min-width: 100%;
+    display: flex;
+    gap: 0;
+    padding: 0;
+    flex-shrink: 0;
+    justify-content: center;
+  }
+
+  .tabBtn {
+    display: block;
+    position: relative;
+    background: #dee0e3;
+    border-radius: 50px;
+    color: #111;
+    padding: 12px 40px;
+    flex-shrink: 0;
+
+    & > * {
+      pointer-events: none; // 解決tab無法點擊的問題
+    }
+
+    &.active {
+      color: #fff;
+      background: #0156a2;
+    }
+  }
+
+  .tabContentGroup {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .mobileTabBtn {
+    width: 100%;
+    background: $btnPrimary;
+    color: #fff;
+    text-align: left;
+    position: relative;
+    @include transition(0.3);
+    padding-right: 40px;
+
+    &::after {
+      content: '';
+      width: 10px;
+      height: 10px;
+      border-bottom: 2px solid #fff;
+      border-right: 2px solid #fff;
+      transform: rotate(45deg);
+      position: absolute;
+      top: 50%;
+      right: 16px;
+      margin-top: -7px;
+      @include transition(0.3);
+    }
+
+    &.active {
+      &::after {
+        transform: rotate(-135deg);
+        margin-top: -2px;
+      }
+    }
+
+    &.active,
+    &:hover {
+      background: $btnPrimaryHover;
+    }
+  }
+}
+// header查詢
+
+.tabwebSearch {
+  width: 80%;
+  margin: 0 auto;
+  transition: 0.5s;
+  .tabItems {
+    padding: 10px 0 0 0;
+  }
+  .tabBtn {
+    display: block;
+    position: relative;
+    background: #eaeaea;
+    border-radius: 10px 10px 0 0;
+    color: #996c33;
+    padding: 6px 40px;
+    flex-shrink: 0;
+    font-weight: 500;
+    font-size: Rem(18);
+    box-shadow: 0 -2px 6px rgba(0, 0, 0, 0.1);
+    @include screen('xsMobile') {
+      padding: 6px 15px;
+    }
+    &:hover {
+      background: #d6d6d6;
+    }
+    &.active {
+      color: #996c33;
+      background: #f5cea7;
+
+      position: relative;
+      &:before {
+        content: '';
+        width: 100%;
+        height: 4px;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-color: $colorPrimary;
+      }
+    }
+  }
+  @include screen('mobile') {
+    width: 100%;
+  }
+  @include screen('xsMobile') {
+    .tabBtn {
+      font-size: Rem(16);
+    }
+  }
+  .tabContentGroup {
+    .tabContent {
+      background-color: #fae8d6;
+      padding: 20px 40px;
+      border-radius: 0 10px 10px 10px;
+      transition: 0.5s;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.13);
+      @include screen('xsMobile') {
+        padding: 20px 20px;
+      }
+    }
+  }
+}

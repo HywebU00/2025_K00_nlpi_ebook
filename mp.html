@@ -1,0 +1,2199 @@
+<!DOCTYPE html>
+<html lang="zh-Hant" class="no-js">
+
+<head>
+  <!-- 使用 noindex 禁止 Google 搜尋建立索引，套版時請工程師刪掉這行 -->
+  <meta name="robots" content="noindex" />
+  <!-- 使用 noindex 禁止 Google 搜尋建立索引，套版時請工程師刪掉這行 -->
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>電子書服務平台</title>
+  <!-- style css -->
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+  <!-- wrapper Start -->
+  <div class="wrapper">
+    <!-- 直接跳主內容區 -->
+    <a class="goCenter" href="#aC">按Enter到主內容區</a>
+
+    <!-- header Start -->
+    <header>
+      <a class="accessKeyItem" href="#aU" id="aU" accesskey="U" aria-label="功能區塊">:::</a>
+      <div class="headTop ">
+
+        <!-- 手機版主選單按鈕 Start -->
+        <button type="button" id="mobileMainMenuBtn">主選單案扭</button>
+        <!-- 手機版主選單按鈕 End -->
+        <!-- 手機版右側按鈕 start -->
+        <div class="moibleRightBtn">
+          <button type="button" class="mobile_borrowingListBtn">借閱清單</button>
+          <button type="button" class="mobile_personalStudyBtn">個人書房</button>
+          <!-- <button type="button" class="mobile_logoIn">登入</button> -->
+          <button type="button" class="mobile_logoOut">登出</button>
+        </div>
+        <!-- 手機版右側按鈕 start -->
+        <div class="topMater">
+          <div class="container">
+            <!-- 網站標題 Start -->
+            <h1>
+              <a href="index.html"><img src="images/logo.png" alt="電子書服務平台" /></a>
+            </h1>
+            <!-- 網站標題 End -->
+            <!-- navigation Start -->
+            <nav class="topNav" role="navigation" aria-label="頁首功能列">
+              <!-- navList Start -->
+              <div class="navList">
+                <div class="title">服務選單</div>
+                <ul>
+                  <li><a href="#">國資圖首頁</a></li>
+                  <li><a href="#">新手上路</a></li>
+                  <li><a href="#">電子書專案捐贈</a></li>
+                  <li><a href="#">服務說明/忘記密碼</a></li>
+                  <li><a href="#">常見問題</a></li>
+                  <li><a href="#">閱讀軟體下載</a></li>
+                  <li><a href="#">加入會員</a></li>
+                </ul>
+              </div>
+              <!-- navList End -->
+              <div class="navButton">
+
+                <!-- 個人書房 -->
+                <div class="personalStudyBtn">
+                  <button type="button" class="btnPrimary"><span>個人書房</span></button>
+                </div>
+                <!-- 借閱清單 -->
+                <div class="borrowingListBtn">
+                  <button type="button" class="btnPrimary"><span>借閱清單</span></button>
+                </div>
+                <!-- 回首頁 -->
+                <div class="backfrontpageBtn">
+                  <button type="button" class="btnPrimary"><span>回首頁</span></button>
+                </div>
+                <!-- 登入 -->
+                <div class="logoIn">
+                  <button type="button" class="btnPrimary"><span>登入</span></button>
+                </div>
+                <!-- 登出 -->
+                <div class="logoOut">
+                  <button type="button" class="logoOutbtn"><span>登出</span></button>
+                </div>
+
+              </div>
+
+            </nav>
+            <!-- navigation End -->
+          </div>
+        </div>
+        <div class="eBooksMater">
+          <div class="container">
+            <ul>
+              <li>線上開放閱讀免費電子書</li>
+              <li><em>51,617</em>種電子書</li>
+              <li><em>477,473</em>冊電子書</li>
+              <li><em>8</em>縣市合作館</li>
+            </ul>
+          </div>
+        </div>
+        <!-- topSearch 內容 Start -->
+        <div class="webSearchBox">
+          <div class="container">
+            <div class="tabSet tabwebSearch">
+              <div class="tabBtnBox">
+                <div class="tabItems">
+                  <button type="button" class="tabBtn active"><span>搜尋全部電子書</span></button>
+                  <button type="button" class="tabBtn ">查目前可借電子書 </button>
+                </div>
+              </div>
+              <div class="tabContentGroup">
+                <div class="tabContent">
+                  <div class="tabContentIn">
+                    <div class="webSearch" role="search">
+                      <div class="webSearchContent">
+                        <div class="formList">
+                          <div class="formList_group">
+                            <label for="topSearchInput" class="srOnly">搜尋</label>
+                            <input name="topSearchInput" id="topSearchInput" type="text" placeholder="請輸入電子書查詢詞" accesskey="S" aria-label="搜尋網站內容" />
+                            <button type="button" class="btnPrimary">查詢</button>
+                          </div>
+                          <button type="button" class="advancedSearch">進階</button>
+                        </div>
+                        <div class="hotKeyword">
+                          <span>熱門搜尋：</span>
+                          <ul>
+                            <li><a href="#">科幻小說</a></li>
+                            <li><a href="#">推理小說</a></li>
+                            <li><a href="#">暢銷書</a></li>
+                            <li><a href="#">文學小說</a></li>
+                            <li><a href="#">商業理財</a></li>
+                            <li><a href="#">心理勵志</a></li>
+                            <li><a href="#">親子教養</a></li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="tabContent" role="tabpanel">
+                  <div class="tabContentIn">
+                    <div class="webSearch" role="search">
+                      <div class="webSearchContent">
+
+                        <div class="formList">
+                          <div class="formList_group">
+                            <label for="topSearchInput" class="srOnly">搜尋</label>
+                            <input name="topSearchInput" id="topSearchInput" type="text" placeholder="請輸入可借電子書查詢詞" accesskey="S" aria-label="搜尋網站內容" />
+                            <button type="button" class="btnPrimary">查詢</button>
+                          </div>
+                          <button type="button" class="advancedSearch">進階</button>
+                        </div>
+                        <div class="hotKeyword">
+                          <span>熱門搜尋：</span>
+                          <ul>
+                            <!-- <li><a href="#">科幻小說</a></li> -->
+                            <li><a href="#">推理小說</a></li>
+                            <li><a href="#">暢銷書</a></li>
+                            <li><a href="#">文學小說</a></li>
+                            <li><a href="#">商業理財</a></li>
+                            <li><a href="#">心理勵志</a></li>
+                            <li><a href="#">親子教養</a></li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- topSearch 內容 End -->
+
+      </div>
+      <!-- noscript -->
+      <noscript>
+        您的瀏覽器不支援JavaScript語法，JavaScript語法並不影響內容的陳述。您可使用按鍵盤上的Ctrl鍵+ (+)鍵放大/(-)鍵縮小來改變字型大小；回到上一頁可使用瀏覽器提供的 Alt+左方向鍵(←) 快速鍵功能；列印可使用瀏覽器提供的(Ctrl+P)功能。您的瀏覽器，不支援script語法，若您的瀏覽器無法支援請點選此超連結
+        <a href="#">網站導覽</a>
+      </noscript>
+      <!-- menu Start -->
+      <!-- data-close-btn 提供手機主選單關閉按鈕抓取用-->
+      <div class="mainMenu">
+        <div class="container">
+          <nav class="menu" role="navigation" aria-label="主選單">
+            <div class="title">功能選單</div>
+            <ul>
+              <li>
+                <a href="#">所有分類</a>
+                <ul>
+                  <li><a href="#">親子教養</a></li>
+                  <li><a href="#">哲學宗教</a>
+                    <ul>
+                      <li><a href="#">宗教命理</a></li>
+                      <li><a href="#">西方哲學</a></li>
+                      <li><a href="#">東方哲學</a></li>
+                      <li><a href="#">理論思想</a></li>
+                    </ul>
+                  </li>
+                  <li><a href="#">自然科普</a>
+                    <ul>
+                      <li><a href="#">應用科學</a></li>
+                      <li><a href="#">動物/植物</a></li>
+                      <li><a href="#">生物學/人類學</a></li>
+                      <li><a href="#">物理/化學</a></li>
+                      <li><a href="#">天文學/地球科學</a></li>
+                      <li><a href="#">數學</a></li>
+                      <li><a href="#">科普</a></li>
+                    </ul>
+                  </li>
+                  <li><a href="#">電腦網路</a></li>
+                  <li><a href="#">休閒生活</a>
+                    <ul>
+                      <li><a href="#">環保生態</a></li>
+                      <li><a href="#">休閒活動</a></li>
+                      <li><a href="#">運動</a></li>
+                      <li><a href="#">寵物</a></li>
+                      <li><a href="#">園藝</a></li>
+                      <li><a href="#">手作設計</a></li>
+                      <li><a href="#">美容/時尚</a></li>
+                      <li><a href="#">居家生活</a></li>
+                    </ul>
+                  </li>
+                  <li><a href="#">醫學保健</a>
+                    <ul>
+                      <li><a href="#">疾病百科</a></li>
+                      <li><a href="#">中醫</a></li>
+                      <li><a href="#">公共衛生</a></li>
+                      <li><a href="#">家庭衛生</a></li>
+                      <li><a href="#">健康養生</a></li>
+                      <li><a href="#">婦產/老幼</a></li>
+                      <li><a href="#">醫藥健保</a></li>
+                      <li><a href="#">醫事護理</a></li>
+                      <li><a href="#">醫界人物傳記</a></li>
+                    </ul>
+                  </li>
+                  <li><a href="#">圖文漫畫</a></li>
+                  <li><a href="#">文學</a>
+                    <ul>
+                      <li><a href="#">總論/方法</a></li>
+                      <li><a href="#">台灣文學</a></li>
+                      <li><a href="#">中國文學</a></li>
+                      <li><a href="#">東方文學</a></li>
+                      <li><a href="#">西洋文學</a></li>
+                      <li><a href="#">世界文學總集</a></li>
+                      <li><a href="#">文藝評論</a></li>
+                      <li><a href="#">傳記</a></li>
+                      <li><a href="#">特藏參考論從</a></li>
+                    </ul>
+                  </li>
+                  <li><a href="#">童書/青少年文學</a></li>
+                </ul>
+              </li>
+              <li><a href="#">最新消息</a></li>
+              <li><a href="#">新進書籍</a></li>
+              <li><a href="#">熱門書籍</a></li>
+              <li><a href="#">主題書展</a></li>
+              <li><a href="#">有聲書</a></li>
+              <li><a href="#">推薦好書</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+      <!-- menu End -->
+    </header>
+    <!-- header End -->
+    <!-- main Start -->
+    <main>
+      <a class="accessKeyItem" href="#aC" id="aC" accesskey="C" aria-label="主要內容區">:::</a>
+      <!-- mpSlider 大圖輪播Start -->
+      <section>
+        <div class="container">
+          <div class="mpSlider flexTpl_12 flexFull">
+            <!-- Swiper start-->
+            <div class="swiperBox">
+              <div class="swiper">
+                <!-- swiper 左邊箭頭-->
+                <button type="button" class="swiperPrev swiperArrow">上一筆</button>
+                <div class="swiper-wrapper">
+                  <!-- 1 -->
+                  <div class="swiper-slide">
+                    <div class="slidecontent">
+                      <div class="pic">
+                        <img src="images/mpSlider_pic01.jpg" alt="第1張圖說" />
+                      </div>
+                      <div class="text_content">
+                        <div class="title">今天想讀什麼 ? 讓AI替你挑一本</div>
+                        <p>全新「AI 精選書單」上線，依你興趣推薦對味好書</p>
+                        <div class="slidebtn"><a href="#">探索體驗</a></div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- 2 -->
+                  <div class="swiper-slide">
+                    <div class="slidecontent">
+                      <div class="pic">
+                        <img src="images/mpSlider_pic01.jpg" alt="第1張圖說" />
+                      </div>
+                      <div class="text_content">
+                        <div class="title">今天想讀什麼 ? 讓AI替你挑一本</div>
+                        <p>全新「AI 精選書單」上線，依你興趣推薦對味好書</p>
+                        <div class="slidebtn"><a href="#">探索體驗</a></div>
+                      </div>
+                    </div>
+                  </div>
+                  <!--  -->
+                </div>
+                <!-- swiper 右邊箭頭-->
+                <button type="button" class="swiperNext swiperArrow">下一筆</button>
+              </div>
+              <div class="swiperPagination"></div>
+            </div>
+            <!-- Swiper send-->
+          </div>
+        </div>
+      </section>
+      <!-- mpSlider 大圖輪播End -->
+      <!-- mp_marqueeSlider 跑馬燈輪播 Start -->
+      <section>
+        <div class="container">
+          <div class="marqueeSlider flexTpl_12 ">
+            <div class="closebtn"><a href="#">關閉</a></div>
+            <!-- Swiper start-->
+            <div class="swiperBox">
+              <div class="swiper">
+                <div class="swiper-wrapper">
+                  <!-- 1 -->
+                  <div class="swiper-slide">
+                    <a href="#">春節期間電子書借閱服務24小時不中斷，陪您度過書香滿溢的新年！開始閱讀</a>
+                  </div>
+                  <!-- 2 -->
+                  <div class="swiper-slide">
+                    <a href="#">系統維護通知：1月20日凌晨2:00-6:00進行系統更新，期間可能影響服務了解詳情</a>
+                  </div>
+                  <!-- 3 -->
+                  <div class="swiper-slide">
+                    <a href="#">2025年「閱讀全壘打」活動開始！超過10,000本電子書免費閱讀，立即體驗數位閱讀新魅力！
+                      立即參加</a>
+                  </div>
+                  <!--  -->
+                </div>
+                <button type="button" class="swiperPrev swiperArrow">上一筆</button>
+                <button type="button" class="swiperNext swiperArrow">下一筆</button>
+              </div>
+              <div class="swiperPagination"></div>
+            </div>
+            <!-- Swiper end-->
+          </div>
+        </div>
+      </section>
+      <!-- arqueeSlider 跑馬燈輪播  End -->
+      <!-- 推薦好書start -->
+      <section>
+        <div class="container">
+          <div class="recommendedBooks flexTpl_12">
+            <div class="col">
+              <h2 class="sectionTitle">推薦好書</h2>
+              <div class="sectionSubtitle">精選優質書籍，為您推薦值得一讀的好書</div>
+              <!-- Swiper start-->
+              <div class="booksSwiperBox">
+                <div class="swiper">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                      <!-- 資料內容 start-->
+                      <div class="booksBox">
+                        <div class="picgroup"><img src="images/books_pic01.jpg" alt="書名">
+                          <div class="collectbtn"><a href="#" class="active"><img src="images/icon_collectbtn.png" alt="收藏"></a></div>
+                          <div class="fileformat">
+                            <ul>
+                              <li>PDF</li>
+                              <li>EPUB</li>
+                            </ul>
+                          </div>
+                        </div>
+                        <div class="content">
+                          <div class="title">一個投機者的告白四部曲</div>
+                          <div class="author">安德烈．科斯托蘭尼</div>
+                          <div class="years">2024</div>
+                          <button type="button" class="btnPrimary"><span class="borrowingbtn">我要借閱</span></button>
+                        </div>
+                      </div>
+                      <!-- 資料內容 end-->
+                    </div>
+                    <div class="swiper-slide">
+                      <!-- 資料內容 start-->
+                      <div class="booksBox">
+                        <div class="picgroup"><img src="images/books_pic02.jpg" alt="書名">
+                          <div class="collectbtn"><a href="#"><img src="images/icon_collectbtn.png" alt="收藏"></a></div>
+                          <div class="fileformat">
+                            <ul>
+                              <li>PDF</li>
+                              <li>EPUB</li>
+                            </ul>
+                          </div>
+                        </div>
+                        <div class="content">
+                          <div class="title">萊拉</div>
+                          <div class="author">瑪莉蓮.羅賓遜</div>
+                          <div class="years">2024</div>
+                          <button type="button" class="btnPrimary"><span class="borrowingbtn">我要借閱</span></button>
+                        </div>
+                      </div>
+                      <!-- 資料內容 end-->
+                    </div>
+                    <div class="swiper-slide">
+                      <!-- 資料內容 start-->
+                      <div class="booksBox">
+                        <div class="picgroup"><img src="images/books_pic03.jpg" alt="書名">
+                          <div class="collectbtn"><a href="#"><img src="images/icon_collectbtn.png" alt="收藏"></a></div>
+                          <div class="fileformat">
+                            <ul>
+                              <li>PDF</li>
+                              <li>EPUB</li>
+                            </ul>
+                          </div>
+                        </div>
+                        <div class="content">
+                          <div class="title">Canva + AI創意設計與品牌應用250招</div>
+                          <div class="author">鄧君如 / 總監製</div>
+                          <div class="years">2024</div>
+                          <button type="button" class="btnPrimary"><span class="borrowingbtn">我要借閱</span></button>
+                        </div>
+                      </div>
+                      <!-- 資料內容 end-->
+                    </div>
+                    <div class="swiper-slide">
+                      <!-- 資料內容 start-->
+                      <div class="booksBox">
+                        <div class="picgroup"><img src="images/books_pic04.jpg" alt="書名">
+                          <div class="collectbtn"><a href="#"><img src="images/icon_collectbtn.png" alt="收藏"></a></div>
+                          <div class="fileformat">
+                            <ul>
+                              <li>PDF</li>
+                              <li>EPUB</li>
+                            </ul>
+                          </div>
+                        </div>
+                        <div class="content">
+                          <div class="title">東方美人</div>
+                          <div class="author">陳玉慧</div>
+                          <div class="years">2024</div>
+                          <button type="button" class="btnPrimary"><span class="borrowingbtn">我要借閱</span></button>
+                        </div>
+                      </div>
+                      <!-- 資料內容 end-->
+                    </div>
+                    <div class="swiper-slide">
+                      <!-- 資料內容 start-->
+                      <div class="booksBox">
+                        <div class="picgroup"><img src="images/books_pic05.jpg" alt="書名">
+                          <div class="collectbtn"><a href="#"><img src="images/icon_collectbtn.png" alt="收藏"></a></div>
+                          <div class="fileformat">
+                            <ul>
+                              <li>PDF</li>
+                              <li>EPUB</li>
+                            </ul>
+                          </div>
+                        </div>
+                        <div class="content">
+                          <div class="title">供應鏈戰爭：砂、鹽、鐵、銅、鋰、石油的戰略價值</div>
+                          <div class="author">埃德・康威</div>
+                          <div class="years">2023</div>
+                          <button type="button" class="btnPrimary"><span class="borrowingbtn">我要借閱</span></button>
+                        </div>
+                      </div>
+                      <!-- 資料內容 end-->
+                    </div>
+                    <div class="swiper-slide">
+                      <!-- 資料內容 start-->
+                      <div class="booksBox">
+                        <div class="picgroup"><img src="images/books_pic06.jpg" alt="書名">
+                          <div class="collectbtn"><a href="#"><img src="images/icon_collectbtn.png" alt="收藏"></a></div>
+                          <div class="fileformat">
+                            <ul>
+                              <li>PDF</li>
+                              <li>EPUB</li>
+                            </ul>
+                          </div>
+                        </div>
+                        <div class="content">
+                          <div class="title">人生五張表，你也可以FIRE</div>
+                          <div class="author">吳家揚</div>
+                          <div class="years">2021</div>
+                          <button type="button" class="btnPrimary"><span class="borrowingbtn">我要借閱</span></button>
+                        </div>
+                      </div>
+                      <!-- 資料內容 end-->
+                    </div>
+                    <div class="swiper-slide">
+                      <!-- 資料內容 start-->
+                      <div class="booksBox">
+                        <div class="picgroup"><img src="images/newbook01.jpg" alt="書名">
+                          <div class="collectbtn"><a href="#"><img src="images/icon_collectbtn.png" alt="收藏"></a></div>
+                          <div class="fileformat">
+                            <ul>
+                              <li>PDF</li>
+                              <li>EPUB</li>
+                            </ul>
+                          </div>
+                        </div>
+                        <div class="content">
+                          <div class="title">一個投機者的告白四部曲</div>
+                          <div class="author">安德烈．科斯托蘭尼</div>
+                          <div class="years">2024</div>
+                          <button type="button" class="btnPrimary"><span class="borrowingbtn">我要借閱</span></button>
+                        </div>
+                      </div>
+                      <!-- 資料內容 end-->
+                    </div>
+                    <div class="swiper-slide">
+                      <!-- 資料內容 start-->
+                      <div class="booksBox">
+                        <div class="picgroup"><img src="images/newbook02.jpg" alt="書名">
+                          <div class="collectbtn"><a href="#"><img src="images/icon_collectbtn.png" alt="收藏"></a></div>
+                          <div class="fileformat">
+                            <ul>
+                              <li>PDF</li>
+                              <li>EPUB</li>
+                            </ul>
+                          </div>
+                        </div>
+                        <div class="content">
+                          <div class="title">萊拉</div>
+                          <div class="author">瑪莉蓮.羅賓遜</div>
+                          <div class="years">2024</div>
+                          <button type="button" class="btnPrimary"><span class="borrowingbtn">我要借閱</span></button>
+                        </div>
+                      </div>
+                      <!-- 資料內容 end-->
+                    </div>
+                    <div class="swiper-slide">
+                      <!-- 資料內容 start-->
+                      <div class="booksBox">
+                        <div class="picgroup"><img src="images/books_pic03.jpg" alt="書名">
+                          <div class="collectbtn"><a href="#"><img src="images/icon_collectbtn.png" alt="收藏"></a></div>
+                          <div class="fileformat">
+                            <ul>
+                              <li>PDF</li>
+                              <li>EPUB</li>
+                            </ul>
+                          </div>
+                        </div>
+                        <div class="content">
+                          <div class="title">Canva + AI創意設計與品牌應用250招</div>
+                          <div class="author">鄧君如 / 總監製</div>
+                          <div class="years">2024</div>
+                          <button type="button" class="btnPrimary"><span class="borrowingbtn">我要借閱</span></button>
+                        </div>
+                      </div>
+                      <!-- 資料內容 end-->
+                    </div>
+                    <div class="swiper-slide">
+                      <!-- 資料內容 start-->
+                      <div class="booksBox">
+                        <div class="picgroup"><img src="images/books_pic04.jpg" alt="書名">
+                          <div class="collectbtn"><a href="#"><img src="images/icon_collectbtn.png" alt="收藏"></a></div>
+                          <div class="fileformat">
+                            <ul>
+                              <li>PDF</li>
+                              <li>EPUB</li>
+                            </ul>
+                          </div>
+                        </div>
+                        <div class="content">
+                          <div class="title">東方美人</div>
+                          <div class="author">陳玉慧</div>
+                          <div class="years">2024</div>
+                          <button type="button" class="btnPrimary"><span class="borrowingbtn">我要借閱</span></button>
+                        </div>
+                      </div>
+                      <!-- 資料內容 end-->
+                    </div>
+                    <div class="swiper-slide">
+                      <!-- 資料內容 start-->
+                      <div class="booksBox">
+                        <div class="picgroup"><img src="images/books_pic05.jpg" alt="書名">
+                          <div class="collectbtn"><a href="#"><img src="images/icon_collectbtn.png" alt="收藏"></a></div>
+                          <div class="fileformat">
+                            <ul>
+                              <li>PDF</li>
+                              <li>EPUB</li>
+                            </ul>
+                          </div>
+                        </div>
+                        <div class="content">
+                          <div class="title">供應鏈戰爭：砂、鹽、鐵、銅、鋰、石油的戰略價值</div>
+                          <div class="author">埃德・康威</div>
+                          <div class="years">2023</div>
+                          <button type="button" class="btnPrimary"><span class="borrowingbtn">我要借閱</span></button>
+                        </div>
+                      </div>
+                      <!-- 資料內容 end-->
+                    </div>
+                    <div class="swiper-slide">
+                      <!-- 資料內容 start-->
+                      <div class="booksBox">
+                        <div class="picgroup"><img src="images/books_pic06.jpg" alt="書名">
+                          <div class="collectbtn"><a href="#"><img src="images/icon_collectbtn.png" alt="收藏"></a></div>
+                          <div class="fileformat">
+                            <ul>
+                              <li>PDF</li>
+                              <li>EPUB</li>
+                            </ul>
+                          </div>
+                        </div>
+                        <div class="content">
+                          <div class="title">人生五張表，你也可以FIRE</div>
+                          <div class="author">吳家揚</div>
+                          <div class="years">2021</div>
+                          <button type="button" class="btnPrimary"><span class="borrowingbtn">我要借閱</span></button>
+                        </div>
+                      </div>
+                      <!-- 資料內容 end-->
+                    </div>
+                    <div class="swiper-slide">
+                      <!-- 資料內容 start-->
+                      <div class="booksBox">
+                        <div class="picgroup"><img src="images/books_pic01.jpg" alt="書名">
+                          <div class="collectbtn"><a href="#"><img src="images/icon_collectbtn.png" alt="收藏"></a></div>
+                          <div class="fileformat">
+                            <ul>
+                              <li>PDF</li>
+                              <li>EPUB</li>
+                            </ul>
+                          </div>
+                        </div>
+                        <div class="content">
+                          <div class="title">一個投機者的告白四部曲</div>
+                          <div class="author">安德烈．科斯托蘭尼</div>
+                          <div class="years">2024</div>
+                          <button type="button" class="btnPrimary"><span class="borrowingbtn">我要借閱</span></button>
+                        </div>
+                      </div>
+                      <!-- 資料內容 end-->
+                    </div>
+                    <div class="swiper-slide">
+                      <!-- 資料內容 start-->
+                      <div class="booksBox">
+                        <div class="picgroup"><img src="images/books_pic02.jpg" alt="書名">
+                          <div class="collectbtn"><a href="#"><img src="images/icon_collectbtn.png" alt="收藏"></a></div>
+                          <div class="fileformat">
+                            <ul>
+                              <li>PDF</li>
+                              <li>EPUB</li>
+                            </ul>
+                          </div>
+                        </div>
+                        <div class="content">
+                          <div class="title">萊拉</div>
+                          <div class="author">瑪莉蓮.羅賓遜</div>
+                          <div class="years">2024</div>
+                          <button type="button" class="btnPrimary"><span class="borrowingbtn">我要借閱</span></button>
+                        </div>
+                      </div>
+                      <!-- 資料內容 end-->
+                    </div>
+                    <div class="swiper-slide">
+                      <!-- 資料內容 start-->
+                      <div class="booksBox">
+                        <div class="picgroup"><img src="images/books_pic03.jpg" alt="書名">
+                          <div class="collectbtn"><a href="#"><img src="images/icon_collectbtn.png" alt="收藏"></a></div>
+                          <div class="fileformat">
+                            <ul>
+                              <li>PDF</li>
+                              <li>EPUB</li>
+                            </ul>
+                          </div>
+                        </div>
+                        <div class="content">
+                          <div class="title">Canva + AI創意設計與品牌應用250招</div>
+                          <div class="author">鄧君如 / 總監製</div>
+                          <div class="years">2024</div>
+                          <button type="button" class="btnPrimary"><span class="borrowingbtn">我要借閱</span></button>
+                        </div>
+                      </div>
+                      <!-- 資料內容 end-->
+                    </div>
+                    <div class="swiper-slide">
+                      <!-- 資料內容 start-->
+                      <div class="booksBox">
+                        <div class="picgroup"><img src="images/books_pic04.jpg" alt="書名">
+                          <div class="collectbtn"><a href="#"><img src="images/icon_collectbtn.png" alt="收藏"></a></div>
+                          <div class="fileformat">
+                            <ul>
+                              <li>PDF</li>
+                              <li>EPUB</li>
+                            </ul>
+                          </div>
+                        </div>
+                        <div class="content">
+                          <div class="title">東方美人</div>
+                          <div class="author">陳玉慧</div>
+                          <div class="years">2024</div>
+                          <button type="button" class="btnPrimary"><span class="borrowingbtn">我要借閱</span></button>
+                        </div>
+                      </div>
+                      <!-- 資料內容 end-->
+                    </div>
+                    <div class="swiper-slide">
+                      <!-- 資料內容 start-->
+                      <div class="booksBox">
+                        <div class="picgroup"><img src="images/books_pic05.jpg" alt="書名">
+                          <div class="collectbtn"><a href="#"><img src="images/icon_collectbtn.png" alt="收藏"></a></div>
+                          <div class="fileformat">
+                            <ul>
+                              <li>PDF</li>
+                              <li>EPUB</li>
+                            </ul>
+                          </div>
+                        </div>
+                        <div class="content">
+                          <div class="title">供應鏈戰爭：砂、鹽、鐵、銅、鋰、石油的戰略價值</div>
+                          <div class="author">埃德・康威</div>
+                          <div class="years">2023</div>
+                          <button type="button" class="btnPrimary"><span class="borrowingbtn">我要借閱</span></button>
+                        </div>
+                      </div>
+                      <!-- 資料內容 end-->
+                    </div>
+                    <div class="swiper-slide">
+                      <!-- 資料內容 start-->
+                      <div class="booksBox">
+                        <div class="picgroup"><img src="images/books_pic06.jpg" alt="書名">
+                          <div class="collectbtn"><a href="#"><img src="images/icon_collectbtn.png" alt="收藏"></a></div>
+                          <div class="fileformat">
+                            <ul>
+                              <li>PDF</li>
+                              <li>EPUB</li>
+                            </ul>
+                          </div>
+                        </div>
+                        <div class="content">
+                          <div class="title">人生五張表，你也可以FIRE</div>
+                          <div class="author">吳家揚</div>
+                          <div class="years">2021</div>
+                          <button type="button" class="btnPrimary"><span class="borrowingbtn">我要借閱</span></button>
+                        </div>
+                      </div>
+                      <!-- 資料內容 end-->
+                    </div>
+                  </div>
+                </div>
+                <button type="button" class="swiperPrev swiperArrow">上一筆</button>
+                <button type="button" class="swiperNext swiperArrow">下一筆</button>
+                <div class="swiperPagination"></div>
+              </div>
+              <!-- Swiper end-->
+              <!-- more -->
+              <div class="moreBtn"><a href="#">瀏覽更多</a></div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- 推薦好書end -->
+      <!-- 主題書展start -->
+      <section>
+        <div class="container">
+          <div class="themedBookfair flexTpl_12">
+            <div class="col">
+              <h2 class="sectionTitle">主題書展</h2>
+              <div class="bookfairBox">
+                <div class="leftBox">
+                  <div class="bookfairneme">\ 2025 青春運動主題書展 /</div>
+                  <div class="title">閱讀全壘打•繪動青春</div>
+                  <div class="time">展示期間：2025-06-18 ~ 2025-09-14</div>
+                  <p>2025年「閱讀全壘打」以「繪動青春」為主題，精選結合青春、健康、運動、繪本與創意等電子書辦理系列書展！從圖像豐富的繪本，到觸動青少年心靈的成長故事，還有各種與棒球、運動生活息息相關的知識資源，邀請讀者透過數位閱讀感受閱讀與運動相互激盪的活力魅力。
+                    無論你是熱愛繪圖故事的孩童、還是喜愛在運動場奔馳的青少年，或是關注身心健康的成人，都能在本次書展中體驗電子閱讀新風貌，青春活力一起上壘！</p>
+                  <!-- Swiper start-->
+                  <div class="bookfairSwiperBox">
+                    <div class="swiper">
+                      <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                          <div class="bookCover"><a href="#"><img src="images/bookfair_pic01.jpg" alt="書名"></a></div>
+                        </div>
+                        <div class="swiper-slide">
+                          <div class="bookCover"><a href="#"><img src="images/bookfair_pic02.jpg" alt="書名"></a></div>
+                        </div>
+                        <div class="swiper-slide">
+                          <div class="bookCover"><a href="#"><img src="images/bookfair_pic03.jpg" alt="書名"></a></div>
+                        </div>
+                        <div class="swiper-slide">
+                          <div class="bookCover"><a href="#"><img src="images/bookfair_pic04.jpg" alt="書名"></a></div>
+                        </div>
+                        <div class="swiper-slide">
+                          <div class="bookCover"><a href="#"><img src="images/bookfair_pic04.jpg" alt="書名"></a></div>
+                        </div>
+                      </div>
+                    </div>
+                    <button type="button" class="swiperPrev swiperArrow">上一筆</button>
+                    <button type="button" class="swiperNext swiperArrow">下一筆</button>
+
+                  </div>
+                  <!-- Swiper end-->
+                </div>
+                <div class="rightBox">
+                  <div class="bookfairBig"><a href="javascript:;"><img src="images/bookfair_bigpic.jpg" alt="書名"></a></div>
+                </div>
+              </div>
+              <div class="bookfairlistBox">
+                <div class="bookfairlistSwiperBox">
+                  <div class="swiper">
+                    <div class="swiper-wrapper">
+                      <div class="swiper-slide">
+                        <div class="bookfairlist"><a href="javascript:;">
+                            <div class="pic"><img src="images/bookfair_pic05.jpg" alt="書名"></div>
+                            <div class="title">理財閱來閱有財</div>
+                            <div class="time">展示期間：2025-06-18 ~ 2025-09-14</div>
+                          </a>
+                        </div>
+                      </div>
+                      <div class="swiper-slide">
+                        <div class="bookfairlist"><a href="javascript:;">
+                            <div class="pic"><img src="images/bookfair_pic06.jpg" alt="書名"></div>
+                            <div class="title">理財閱來閱有財</div>
+                            <div class="time">展示期間：2025-06-18 ~ 2025-09-14</div>
+                          </a>
+                        </div>
+                      </div>
+                      <div class="swiper-slide">
+                        <div class="bookfairlist"><a href="javascript:;">
+                            <div class="pic"><img src="images/bookfair_pic07.jpg" alt="書名"></div>
+                            <div class="title">理財閱來閱有財</div>
+                            <div class="time">展示期間：2025-06-18 ~ 2025-09-14</div>
+                          </a>
+                        </div>
+                      </div>
+                      <div class="swiper-slide">
+                        <div class="bookfairlist"><a href="javascript:;">
+                            <div class="pic"><img src="images/bookfair_pic08.jpg" alt="書名"></div>
+                            <div class="title">理財閱來閱有財</div>
+                            <div class="time">展示期間：2025-06-18 ~ 2025-09-14</div>
+                          </a>
+                        </div>
+                      </div>
+                      <div class="swiper-slide">
+                        <div class="bookfairlist"><a href="javascript:;">
+                            <div class="pic"><img src="images/bookfair_pic08.jpg" alt="書名"></div>
+                            <div class="title">理財閱來閱有財</div>
+                            <div class="time">展示期間：2025-06-18 ~ 2025-09-14</div>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <button type="button" class="swiperPrev swiperArrow">上一筆</button>
+                  <button type="button" class="swiperNext swiperArrow">下一筆</button>
+                </div>
+              </div>
+              <div class="moreBtn"><a href="#">瀏覽更多</a></div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- 主題書展end -->
+      <!-- 熱門書籍start -->
+      <section>
+        <div class="container">
+          <div class="popularBooks flexTpl_12">
+            <div class="col">
+              <h2 class="sectionTitle">熱門書籍</h2>
+              <div class="sortBox">
+                <ul>
+                  <li><a href="#" class="active">全部書籍</a></li>
+                  <li><a href="#">親子教養</a></li>
+                  <li><a href="#">哲學宗教</a></li>
+                  <li><a href="#">自然科普</a></li>
+                  <li><a href="#">電腦網路</a></li>
+                  <li><a href="#">醫學保健</a></li>
+                  <li><a href="#">圖文漫畫</a></li>
+                  <li><a href="#">文學</a></li>
+                  <li><a href="#">童書／青少年文學</a></li>
+                  <li><a href="#">語言學習</a></li>
+                  <li><a href="#">財經商管</a></li>
+                  <li><a href="#">史地旅遊</a></li>
+                  <li><a href="#">藝術設計</a></li>
+                  <li><a href="#">心理勵志</a></li>
+                  <li><a href="#">原住民</a></li>
+                </ul>
+              </div>
+              <!-- Swiper start-->
+              <div class="booksSwiperBox">
+                <div class="swiper">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                      <!-- 資料內容 start-->
+                      <div class="booksBox">
+                        <div class="picgroup"><img src="images/books_pic01.jpg" alt="書名">
+                          <div class="collectbtn"><a href="#"><img src="images/icon_collectbtn.png" alt="收藏"></a></div>
+                          <div class="fileformat">
+                            <ul>
+                              <li>PDF</li>
+                              <li>EPUB</li>
+                            </ul>
+                          </div>
+                        </div>
+                        <div class="content">
+                          <div class="title">一個投機者的告白四部曲</div>
+                          <div class="author">安德烈．科斯托蘭尼</div>
+                          <div class="years">2024</div>
+                          <button type="button" class="btnPrimary"><span class="borrowingbtn">我要借閱</span></button>
+                        </div>
+                      </div>
+                      <!-- 資料內容 end-->
+                    </div>
+                    <div class="swiper-slide">
+                      <!-- 資料內容 start-->
+                      <div class="booksBox">
+                        <div class="picgroup"><img src="images/books_pic02.jpg" alt="書名">
+                          <div class="collectbtn"><a href="#"><img src="images/icon_collectbtn.png" alt="收藏"></a></div>
+                          <div class="fileformat">
+                            <ul>
+                              <li>PDF</li>
+                              <li>EPUB</li>
+                            </ul>
+                          </div>
+                        </div>
+                        <div class="content">
+                          <div class="title">萊拉</div>
+                          <div class="author">瑪莉蓮.羅賓遜</div>
+                          <div class="years">2024</div>
+                          <button type="button" class="btnPrimary"><span class="borrowingbtn">我要借閱</span></button>
+                        </div>
+                      </div>
+                      <!-- 資料內容 end-->
+                    </div>
+                    <div class="swiper-slide">
+                      <!-- 資料內容 start-->
+                      <div class="booksBox">
+                        <div class="picgroup"><img src="images/books_pic03.jpg" alt="書名">
+                          <div class="collectbtn"><a href="#"><img src="images/icon_collectbtn.png" alt="收藏"></a></div>
+                          <div class="fileformat">
+                            <ul>
+                              <li>PDF</li>
+                              <li>EPUB</li>
+                            </ul>
+                          </div>
+                        </div>
+                        <div class="content">
+                          <div class="title">Canva + AI創意設計與品牌應用250招</div>
+                          <div class="author">鄧君如 / 總監製</div>
+                          <div class="years">2024</div>
+                          <button type="button" class="btnPrimary"><span class="borrowingbtn">我要借閱</span></button>
+                        </div>
+                      </div>
+                      <!-- 資料內容 end-->
+                    </div>
+                    <div class="swiper-slide">
+                      <!-- 資料內容 start-->
+                      <div class="booksBox">
+                        <div class="picgroup"><img src="images/books_pic04.jpg" alt="書名">
+                          <div class="collectbtn"><a href="#"><img src="images/icon_collectbtn.png" alt="收藏"></a></div>
+                          <div class="fileformat">
+                            <ul>
+                              <li>PDF</li>
+                              <li>EPUB</li>
+                            </ul>
+                          </div>
+                        </div>
+                        <div class="content">
+                          <div class="title">東方美人</div>
+                          <div class="author">陳玉慧</div>
+                          <div class="years">2024</div>
+                          <button type="button" class="btnPrimary"><span class="borrowingbtn">我要借閱</span></button>
+                        </div>
+                      </div>
+                      <!-- 資料內容 end-->
+                    </div>
+                    <div class="swiper-slide">
+                      <!-- 資料內容 start-->
+                      <div class="booksBox">
+                        <div class="picgroup"><img src="images/books_pic05.jpg" alt="書名">
+                          <div class="collectbtn"><a href="#"><img src="images/icon_collectbtn.png" alt="收藏"></a></div>
+                          <div class="fileformat">
+                            <ul>
+                              <li>PDF</li>
+                              <li>EPUB</li>
+                            </ul>
+                          </div>
+                        </div>
+                        <div class="content">
+                          <div class="title">供應鏈戰爭：砂、鹽、鐵、銅、鋰、石油的戰略價值</div>
+                          <div class="author">埃德・康威</div>
+                          <div class="years">2023</div>
+                          <button type="button" class="btnPrimary"><span class="borrowingbtn">我要借閱</span></button>
+                        </div>
+                      </div>
+                      <!-- 資料內容 end-->
+                    </div>
+                    <div class="swiper-slide">
+                      <!-- 資料內容 start-->
+                      <div class="booksBox">
+                        <div class="picgroup"><img src="images/books_pic06.jpg" alt="書名">
+                          <div class="collectbtn"><a href="#"><img src="images/icon_collectbtn.png" alt="收藏"></a></div>
+                          <div class="fileformat">
+                            <ul>
+                              <li>PDF</li>
+                              <li>EPUB</li>
+                            </ul>
+                          </div>
+                        </div>
+                        <div class="content">
+                          <div class="title">人生五張表，你也可以FIRE</div>
+                          <div class="author">吳家揚</div>
+                          <div class="years">2021</div>
+                          <button type="button" class="btnPrimary"><span class="borrowingbtn">我要借閱</span></button>
+                        </div>
+                      </div>
+                      <!-- 資料內容 end-->
+                    </div>
+                    <div class="swiper-slide">
+                      <!-- 資料內容 start-->
+                      <div class="booksBox">
+                        <div class="picgroup"><img src="images/books_pic01.jpg" alt="書名">
+                          <div class="collectbtn"><a href="#"><img src="images/icon_collectbtn.png" alt="收藏"></a></div>
+                          <div class="fileformat">
+                            <ul>
+                              <li>PDF</li>
+                              <li>EPUB</li>
+                            </ul>
+                          </div>
+                        </div>
+                        <div class="content">
+                          <div class="title">一個投機者的告白四部曲</div>
+                          <div class="author">安德烈．科斯托蘭尼</div>
+                          <div class="years">2024</div>
+                          <button type="button" class="btnPrimary"><span class="borrowingbtn">我要借閱</span></button>
+                        </div>
+                      </div>
+                      <!-- 資料內容 end-->
+                    </div>
+                    <div class="swiper-slide">
+                      <!-- 資料內容 start-->
+                      <div class="booksBox">
+                        <div class="picgroup"><img src="images/books_pic02.jpg" alt="書名">
+                          <div class="collectbtn"><a href="#"><img src="images/icon_collectbtn.png" alt="收藏"></a></div>
+                          <div class="fileformat">
+                            <ul>
+                              <li>PDF</li>
+                              <li>EPUB</li>
+                            </ul>
+                          </div>
+                        </div>
+                        <div class="content">
+                          <div class="title">萊拉</div>
+                          <div class="author">瑪莉蓮.羅賓遜</div>
+                          <div class="years">2024</div>
+                          <button type="button" class="btnPrimary"><span class="borrowingbtn">我要借閱</span></button>
+                        </div>
+                      </div>
+                      <!-- 資料內容 end-->
+                    </div>
+                    <div class="swiper-slide">
+                      <!-- 資料內容 start-->
+                      <div class="booksBox">
+                        <div class="picgroup"><img src="images/books_pic03.jpg" alt="書名">
+                          <div class="collectbtn"><a href="#"><img src="images/icon_collectbtn.png" alt="收藏"></a></div>
+                          <div class="fileformat">
+                            <ul>
+                              <li>PDF</li>
+                              <li>EPUB</li>
+                            </ul>
+                          </div>
+                        </div>
+                        <div class="content">
+                          <div class="title">Canva + AI創意設計與品牌應用250招</div>
+                          <div class="author">鄧君如 / 總監製</div>
+                          <div class="years">2024</div>
+                          <button type="button" class="btnPrimary"><span class="borrowingbtn">我要借閱</span></button>
+                        </div>
+                      </div>
+                      <!-- 資料內容 end-->
+                    </div>
+                    <div class="swiper-slide">
+                      <!-- 資料內容 start-->
+                      <div class="booksBox">
+                        <div class="picgroup"><img src="images/books_pic04.jpg" alt="書名">
+                          <div class="collectbtn"><a href="#"><img src="images/icon_collectbtn.png" alt="收藏"></a></div>
+                          <div class="fileformat">
+                            <ul>
+                              <li>PDF</li>
+                              <li>EPUB</li>
+                            </ul>
+                          </div>
+                        </div>
+                        <div class="content">
+                          <div class="title">東方美人</div>
+                          <div class="author">陳玉慧</div>
+                          <div class="years">2024</div>
+                          <button type="button" class="btnPrimary"><span class="borrowingbtn">我要借閱</span></button>
+                        </div>
+                      </div>
+                      <!-- 資料內容 end-->
+                    </div>
+                    <div class="swiper-slide">
+                      <!-- 資料內容 start-->
+                      <div class="booksBox">
+                        <div class="picgroup"><img src="images/books_pic05.jpg" alt="書名">
+                          <div class="collectbtn"><a href="#"><img src="images/icon_collectbtn.png" alt="收藏"></a></div>
+                          <div class="fileformat">
+                            <ul>
+                              <li>PDF</li>
+                              <li>EPUB</li>
+                            </ul>
+                          </div>
+                        </div>
+                        <div class="content">
+                          <div class="title">供應鏈戰爭：砂、鹽、鐵、銅、鋰、石油的戰略價值</div>
+                          <div class="author">埃德・康威</div>
+                          <div class="years">2023</div>
+                          <button type="button" class="btnPrimary"><span class="borrowingbtn">我要借閱</span></button>
+                        </div>
+                      </div>
+                      <!-- 資料內容 end-->
+                    </div>
+                    <div class="swiper-slide">
+                      <!-- 資料內容 start-->
+                      <div class="booksBox">
+                        <div class="picgroup"><img src="images/books_pic06.jpg" alt="書名">
+                          <div class="collectbtn"><a href="#"><img src="images/icon_collectbtn.png" alt="收藏"></a></div>
+                          <div class="fileformat">
+                            <ul>
+                              <li>PDF</li>
+                              <li>EPUB</li>
+                            </ul>
+                          </div>
+                        </div>
+                        <div class="content">
+                          <div class="title">人生五張表，你也可以FIRE</div>
+                          <div class="author">吳家揚</div>
+                          <div class="years">2021</div>
+                          <button type="button" class="btnPrimary"><span class="borrowingbtn">我要借閱</span></button>
+                        </div>
+                      </div>
+                      <!-- 資料內容 end-->
+                    </div>
+                    <div class="swiper-slide">
+                      <!-- 資料內容 start-->
+                      <div class="booksBox">
+                        <div class="picgroup"><img src="images/books_pic01.jpg" alt="書名">
+                          <div class="collectbtn"><a href="#"><img src="images/icon_collectbtn.png" alt="收藏"></a></div>
+                          <div class="fileformat">
+                            <ul>
+                              <li>PDF</li>
+                              <li>EPUB</li>
+                            </ul>
+                          </div>
+                        </div>
+                        <div class="content">
+                          <div class="title">一個投機者的告白四部曲</div>
+                          <div class="author">安德烈．科斯托蘭尼</div>
+                          <div class="years">2024</div>
+                          <button type="button" class="btnPrimary"><span class="borrowingbtn">我要借閱</span></button>
+                        </div>
+                      </div>
+                      <!-- 資料內容 end-->
+                    </div>
+                    <div class="swiper-slide">
+                      <!-- 資料內容 start-->
+                      <div class="booksBox">
+                        <div class="picgroup"><img src="images/books_pic02.jpg" alt="書名">
+                          <div class="collectbtn"><a href="#"><img src="images/icon_collectbtn.png" alt="收藏"></a></div>
+                          <div class="fileformat">
+                            <ul>
+                              <li>PDF</li>
+                              <li>EPUB</li>
+                            </ul>
+                          </div>
+                        </div>
+                        <div class="content">
+                          <div class="title">萊拉</div>
+                          <div class="author">瑪莉蓮.羅賓遜</div>
+                          <div class="years">2024</div>
+                          <button type="button" class="btnPrimary"><span class="borrowingbtn">我要借閱</span></button>
+                        </div>
+                      </div>
+                      <!-- 資料內容 end-->
+                    </div>
+                    <div class="swiper-slide">
+                      <!-- 資料內容 start-->
+                      <div class="booksBox">
+                        <div class="picgroup"><img src="images/books_pic03.jpg" alt="書名">
+                          <div class="collectbtn"><a href="#"><img src="images/icon_collectbtn.png" alt="收藏"></a></div>
+                          <div class="fileformat">
+                            <ul>
+                              <li>PDF</li>
+                              <li>EPUB</li>
+                            </ul>
+                          </div>
+                        </div>
+                        <div class="content">
+                          <div class="title">Canva + AI創意設計與品牌應用250招</div>
+                          <div class="author">鄧君如 / 總監製</div>
+                          <div class="years">2024</div>
+                          <button type="button" class="btnPrimary"><span class="borrowingbtn">我要借閱</span></button>
+                        </div>
+                      </div>
+                      <!-- 資料內容 end-->
+                    </div>
+                    <div class="swiper-slide">
+                      <!-- 資料內容 start-->
+                      <div class="booksBox">
+                        <div class="picgroup"><img src="images/books_pic04.jpg" alt="書名">
+                          <div class="collectbtn"><a href="#"><img src="images/icon_collectbtn.png" alt="收藏"></a></div>
+                          <div class="fileformat">
+                            <ul>
+                              <li>PDF</li>
+                              <li>EPUB</li>
+                            </ul>
+                          </div>
+                        </div>
+                        <div class="content">
+                          <div class="title">東方美人</div>
+                          <div class="author">陳玉慧</div>
+                          <div class="years">2024</div>
+                          <button type="button" class="btnPrimary"><span class="borrowingbtn">我要借閱</span></button>
+                        </div>
+                      </div>
+                      <!-- 資料內容 end-->
+                    </div>
+                    <div class="swiper-slide">
+                      <!-- 資料內容 start-->
+                      <div class="booksBox">
+                        <div class="picgroup"><img src="images/books_pic05.jpg" alt="書名">
+                          <div class="collectbtn"><a href="#"><img src="images/icon_collectbtn.png" alt="收藏"></a></div>
+                          <div class="fileformat">
+                            <ul>
+                              <li>PDF</li>
+                              <li>EPUB</li>
+                            </ul>
+                          </div>
+                        </div>
+                        <div class="content">
+                          <div class="title">供應鏈戰爭：砂、鹽、鐵、銅、鋰、石油的戰略價值</div>
+                          <div class="author">埃德・康威</div>
+                          <div class="years">2023</div>
+                          <button type="button" class="btnPrimary"><span class="borrowingbtn">我要借閱</span></button>
+                        </div>
+                      </div>
+                      <!-- 資料內容 end-->
+                    </div>
+                    <div class="swiper-slide">
+                      <!-- 資料內容 start-->
+                      <div class="booksBox">
+                        <div class="picgroup"><img src="images/books_pic06.jpg" alt="書名">
+                          <div class="collectbtn"><a href="#"><img src="images/icon_collectbtn.png" alt="收藏"></a></div>
+                          <div class="fileformat">
+                            <ul>
+                              <li>PDF</li>
+                              <li>EPUB</li>
+                            </ul>
+                          </div>
+                        </div>
+                        <div class="content">
+                          <div class="title">人生五張表，你也可以FIRE</div>
+                          <div class="author">吳家揚</div>
+                          <div class="years">2021</div>
+                          <button type="button" class="btnPrimary"><span class="borrowingbtn">我要借閱</span></button>
+                        </div>
+                      </div>
+                      <!-- 資料內容 end-->
+                    </div>
+                  </div>
+                </div>
+                <button type="button" class="swiperPrev swiperArrow">上一筆</button>
+                <button type="button" class="swiperNext swiperArrow">下一筆</button>
+                <div class="swiperPagination"></div>
+              </div>
+              <!-- Swiper end-->
+              <!-- more -->
+              <div class="moreBtn"><a href="#">瀏覽更多</a></div>
+
+              <!-- 相關書籍區資料 start -->
+              <div class="relatedbooksMater">
+                <div class="customAreaBlock">
+                  <div class="title">自訂區</div>
+                  <p>歡迎來到國資圖電子書服務平台，這裡有51018種、473959冊免費電子書，我們將告訴您如何借閱</p>
+                  <div class="learnBtn"><a href="#"><span>立即了解</span></a></div>
+                </div>
+                <div class="appropriateageBlock">
+                  <div class="title">書籍適讀年齡</div>
+                  <p>依年級選書找到最適合閱讀能力與興趣的書籍</p>
+                  <div class="gradeSwiperBox">
+                    <div class="swiper">
+                      <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                          <div class="grade"><a href="#" class="no01"><span>1</span>年級</a></div>
+                        </div>
+                        <div class="swiper-slide">
+                          <div class="grade"><a href="#" class="no02"><span>2</span>年級</a></div>
+                        </div>
+                        <div class="swiper-slide">
+                          <div class="grade"><a href="#" class="no03"><span>3</span>年級</a></div>
+                        </div>
+                        <div class="swiper-slide">
+                          <div class="grade"><a href="#" class="no04"><span>4</span>年級</a></div>
+                        </div>
+                        <div class="swiper-slide">
+                          <div class="grade"><a href="#" class="no05"><span>5</span>年級</a></div>
+                        </div>
+                        <div class="swiper-slide">
+                          <div class="grade"><a href="#" class="no06"><span>6</span>年級</a></div>
+                        </div>
+                        <div class="swiper-slide">
+                          <div class="grade"><a href="#" class="no07"><span>7</span>年級</a></div>
+                        </div>
+                        <div class="swiper-slide">
+                          <div class="grade"><a href="#" class="no08"><span>8</span>年級</a></div>
+                        </div>
+                        <div class="swiper-slide">
+                          <div class="grade"><a href="#" class="no09"><span>9</span>年級</a></div>
+                        </div>
+                        <div class="swiper-slide">
+                          <div class="grade"><a href="#" class="no10"><span>10</span>年級</a></div>
+                        </div>
+                        <div class="swiper-slide">
+                          <div class="grade"><a href="#" class="no11"><span>11</span>年級</a></div>
+                        </div>
+                        <div class="swiper-slide">
+                          <div class="grade"><a href="#" class="no12"><span>12</span>年級</a></div>
+                        </div>
+                        <div class="swiper-slide">
+                          <div class="grade"><a href="#" class="no12higher"><span><em>高於</em>12</span>年級</a></div>
+                        </div>
+                      </div>
+                    </div>
+                    <button type="button" class="swiperPrev swiperArrow">上一筆</button>
+                    <button type="button" class="swiperNext swiperArrow">下一筆</button>
+                  </div>
+                  <div class="searchmoreBtn"><a href="#"><span>查看更多</span></a></div>
+                </div>
+              </div>
+              <!-- 相關書籍區資料 end -->
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- 熱門書籍end -->
+      <!-- 新進書籍start -->
+      <section>
+        <div class="container">
+          <div class="newBooks flexTpl_12">
+            <div class="col">
+              <h2 class="sectionTitle">新進書籍</h2>
+              <div class="sectionSubtitle">最新上架的精選書籍，搶先體驗最新內容</div>
+              <!-- Swiper start-->
+              <div class="booksSwiperBox">
+                <div class="swiper">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                      <!-- 資料內容 start-->
+                      <div class="booksBox">
+                        <div class="picgroup"><img src="images/books_pic01.jpg" alt="書名">
+                          <div class="collectbtn"><a href="#"><img src="images/icon_collectbtn.png" alt="收藏"></a></div>
+                          <div class="fileformat">
+                            <ul>
+                              <li>PDF</li>
+                              <li>EPUB</li>
+                            </ul>
+                          </div>
+                        </div>
+                        <div class="content">
+                          <div class="title">一個投機者的告白四部曲</div>
+                          <div class="author">安德烈．科斯托蘭尼</div>
+                          <div class="years">2024</div>
+                          <button type="button" class="btnPrimary"><span class="borrowingbtn">我要借閱</span></button>
+                        </div>
+                      </div>
+                      <!-- 資料內容 end-->
+                    </div>
+                    <div class="swiper-slide">
+                      <!-- 資料內容 start-->
+                      <div class="booksBox">
+                        <div class="picgroup"><img src="images/books_pic02.jpg" alt="書名">
+                          <div class="collectbtn"><a href="#"><img src="images/icon_collectbtn.png" alt="收藏"></a></div>
+                          <div class="fileformat">
+                            <ul>
+                              <li>PDF</li>
+                              <li>EPUB</li>
+                            </ul>
+                          </div>
+                        </div>
+                        <div class="content">
+                          <div class="title">萊拉</div>
+                          <div class="author">瑪莉蓮.羅賓遜</div>
+                          <div class="years">2024</div>
+                          <button type="button" class="btnPrimary"><span class="borrowingbtn">我要借閱</span></button>
+                        </div>
+                      </div>
+                      <!-- 資料內容 end-->
+                    </div>
+                    <div class="swiper-slide">
+                      <!-- 資料內容 start-->
+                      <div class="booksBox">
+                        <div class="picgroup"><img src="images/books_pic03.jpg" alt="書名">
+                          <div class="collectbtn"><a href="#"><img src="images/icon_collectbtn.png" alt="收藏"></a></div>
+                          <div class="fileformat">
+                            <ul>
+                              <li>PDF</li>
+                              <li>EPUB</li>
+                            </ul>
+                          </div>
+                        </div>
+                        <div class="content">
+                          <div class="title">Canva + AI創意設計與品牌應用250招</div>
+                          <div class="author">鄧君如 / 總監製</div>
+                          <div class="years">2024</div>
+                          <button type="button" class="btnPrimary"><span class="borrowingbtn">我要借閱</span></button>
+                        </div>
+                      </div>
+                      <!-- 資料內容 end-->
+                    </div>
+                    <div class="swiper-slide">
+                      <!-- 資料內容 start-->
+                      <div class="booksBox">
+                        <div class="picgroup"><img src="images/books_pic04.jpg" alt="書名">
+                          <div class="collectbtn"><a href="#"><img src="images/icon_collectbtn.png" alt="收藏"></a></div>
+                          <div class="fileformat">
+                            <ul>
+                              <li>PDF</li>
+                              <li>EPUB</li>
+                            </ul>
+                          </div>
+                        </div>
+                        <div class="content">
+                          <div class="title">東方美人</div>
+                          <div class="author">陳玉慧</div>
+                          <div class="years">2024</div>
+                          <button type="button" class="btnPrimary"><span class="borrowingbtn">我要借閱</span></button>
+                        </div>
+                      </div>
+                      <!-- 資料內容 end-->
+                    </div>
+                    <div class="swiper-slide">
+                      <!-- 資料內容 start-->
+                      <div class="booksBox">
+                        <div class="picgroup"><img src="images/books_pic05.jpg" alt="書名">
+                          <div class="collectbtn"><a href="#"><img src="images/icon_collectbtn.png" alt="收藏"></a></div>
+                          <div class="fileformat">
+                            <ul>
+                              <li>PDF</li>
+                              <li>EPUB</li>
+                            </ul>
+                          </div>
+                        </div>
+                        <div class="content">
+                          <div class="title">供應鏈戰爭：砂、鹽、鐵、銅、鋰、石油的戰略價值</div>
+                          <div class="author">埃德・康威</div>
+                          <div class="years">2023</div>
+                          <button type="button" class="btnPrimary"><span class="borrowingbtn">我要借閱</span></button>
+                        </div>
+                      </div>
+                      <!-- 資料內容 end-->
+                    </div>
+                    <div class="swiper-slide">
+                      <!-- 資料內容 start-->
+                      <div class="booksBox">
+                        <div class="picgroup"><img src="images/books_pic06.jpg" alt="書名">
+                          <div class="collectbtn"><a href="#"><img src="images/icon_collectbtn.png" alt="收藏"></a></div>
+                          <div class="fileformat">
+                            <ul>
+                              <li>PDF</li>
+                              <li>EPUB</li>
+                            </ul>
+                          </div>
+                        </div>
+                        <div class="content">
+                          <div class="title">人生五張表，你也可以FIRE</div>
+                          <div class="author">吳家揚</div>
+                          <div class="years">2021</div>
+                          <button type="button" class="btnPrimary"><span class="borrowingbtn">我要借閱</span></button>
+                        </div>
+                      </div>
+                      <!-- 資料內容 end-->
+                    </div>
+                    <div class="swiper-slide">
+                      <!-- 資料內容 start-->
+                      <div class="booksBox">
+                        <div class="picgroup"><img src="images/books_pic01.jpg" alt="書名">
+                          <div class="collectbtn"><a href="#"><img src="images/icon_collectbtn.png" alt="收藏"></a></div>
+                          <div class="fileformat">
+                            <ul>
+                              <li>PDF</li>
+                              <li>EPUB</li>
+                            </ul>
+                          </div>
+                        </div>
+                        <div class="content">
+                          <div class="title">一個投機者的告白四部曲</div>
+                          <div class="author">安德烈．科斯托蘭尼</div>
+                          <div class="years">2024</div>
+                          <button type="button" class="btnPrimary"><span class="borrowingbtn">我要借閱</span></button>
+                        </div>
+                      </div>
+                      <!-- 資料內容 end-->
+                    </div>
+                    <div class="swiper-slide">
+                      <!-- 資料內容 start-->
+                      <div class="booksBox">
+                        <div class="picgroup"><img src="images/books_pic01.jpg" alt="書名">
+                          <div class="collectbtn"><a href="#"><img src="images/icon_collectbtn.png" alt="收藏"></a></div>
+                          <div class="fileformat">
+                            <ul>
+                              <li>PDF</li>
+                              <li>EPUB</li>
+                            </ul>
+                          </div>
+                        </div>
+                        <div class="content">
+                          <div class="title">一個投機者的告白四部曲</div>
+                          <div class="author">安德烈．科斯托蘭尼</div>
+                          <div class="years">2024</div>
+                          <button type="button" class="btnPrimary"><span class="borrowingbtn">我要借閱</span></button>
+                        </div>
+                      </div>
+                      <!-- 資料內容 end-->
+                    </div>
+                    <div class="swiper-slide">
+                      <!-- 資料內容 start-->
+                      <div class="booksBox">
+                        <div class="picgroup"><img src="images/books_pic02.jpg" alt="書名">
+                          <div class="collectbtn"><a href="#"><img src="images/icon_collectbtn.png" alt="收藏"></a></div>
+                          <div class="fileformat">
+                            <ul>
+                              <li>PDF</li>
+                              <li>EPUB</li>
+                            </ul>
+                          </div>
+                        </div>
+                        <div class="content">
+                          <div class="title">萊拉</div>
+                          <div class="author">瑪莉蓮.羅賓遜</div>
+                          <div class="years">2024</div>
+                          <button type="button" class="btnPrimary"><span class="borrowingbtn">我要借閱</span></button>
+                        </div>
+                      </div>
+                      <!-- 資料內容 end-->
+                    </div>
+                    <div class="swiper-slide">
+                      <!-- 資料內容 start-->
+                      <div class="booksBox">
+                        <div class="picgroup"><img src="images/books_pic03.jpg" alt="書名">
+                          <div class="collectbtn"><a href="#"><img src="images/icon_collectbtn.png" alt="收藏"></a></div>
+                          <div class="fileformat">
+                            <ul>
+                              <li>PDF</li>
+                              <li>EPUB</li>
+                            </ul>
+                          </div>
+                        </div>
+                        <div class="content">
+                          <div class="title">Canva + AI創意設計與品牌應用250招</div>
+                          <div class="author">鄧君如 / 總監製</div>
+                          <div class="years">2024</div>
+                          <button type="button" class="btnPrimary"><span class="borrowingbtn">我要借閱</span></button>
+                        </div>
+                      </div>
+                      <!-- 資料內容 end-->
+                    </div>
+                    <div class="swiper-slide">
+                      <!-- 資料內容 start-->
+                      <div class="booksBox">
+                        <div class="picgroup"><img src="images/books_pic04.jpg" alt="書名">
+                          <div class="collectbtn"><a href="#"><img src="images/icon_collectbtn.png" alt="收藏"></a></div>
+                          <div class="fileformat">
+                            <ul>
+                              <li>PDF</li>
+                              <li>EPUB</li>
+                            </ul>
+                          </div>
+                        </div>
+                        <div class="content">
+                          <div class="title">東方美人</div>
+                          <div class="author">陳玉慧</div>
+                          <div class="years">2024</div>
+                          <button type="button" class="btnPrimary"><span class="borrowingbtn">我要借閱</span></button>
+                        </div>
+                      </div>
+                      <!-- 資料內容 end-->
+                    </div>
+                    <div class="swiper-slide">
+                      <!-- 資料內容 start-->
+                      <div class="booksBox">
+                        <div class="picgroup"><img src="images/books_pic05.jpg" alt="書名">
+                          <div class="collectbtn"><a href="#"><img src="images/icon_collectbtn.png" alt="收藏"></a></div>
+                          <div class="fileformat">
+                            <ul>
+                              <li>PDF</li>
+                              <li>EPUB</li>
+                            </ul>
+                          </div>
+                        </div>
+                        <div class="content">
+                          <div class="title">供應鏈戰爭：砂、鹽、鐵、銅、鋰、石油的戰略價值</div>
+                          <div class="author">埃德・康威</div>
+                          <div class="years">2023</div>
+                          <button type="button" class="btnPrimary"><span class="borrowingbtn">我要借閱</span></button>
+                        </div>
+                      </div>
+                      <!-- 資料內容 end-->
+                    </div>
+                    <div class="swiper-slide">
+                      <!-- 資料內容 start-->
+                      <div class="booksBox">
+                        <div class="picgroup"><img src="images/books_pic06.jpg" alt="書名">
+                          <div class="collectbtn"><a href="#"><img src="images/icon_collectbtn.png" alt="收藏"></a></div>
+                          <div class="fileformat">
+                            <ul>
+                              <li>PDF</li>
+                              <li>EPUB</li>
+                            </ul>
+                          </div>
+                        </div>
+                        <div class="content">
+                          <div class="title">人生五張表，你也可以FIRE</div>
+                          <div class="author">吳家揚</div>
+                          <div class="years">2021</div>
+                          <button type="button" class="btnPrimary"><span class="borrowingbtn">我要借閱</span></button>
+                        </div>
+                      </div>
+                      <!-- 資料內容 end-->
+                    </div>
+                    <div class="swiper-slide">
+                      <!-- 資料內容 start-->
+                      <div class="booksBox">
+                        <div class="picgroup"><img src="images/books_pic01.jpg" alt="書名">
+                          <div class="collectbtn"><a href="#"><img src="images/icon_collectbtn.png" alt="收藏"></a></div>
+                          <div class="fileformat">
+                            <ul>
+                              <li>PDF</li>
+                              <li>EPUB</li>
+                            </ul>
+                          </div>
+                        </div>
+                        <div class="content">
+                          <div class="title">一個投機者的告白四部曲</div>
+                          <div class="author">安德烈．科斯托蘭尼</div>
+                          <div class="years">2024</div>
+                          <button type="button" class="btnPrimary"><span class="borrowingbtn">我要借閱</span></button>
+                        </div>
+                      </div>
+                      <!-- 資料內容 end-->
+                    </div>
+
+                  </div>
+                </div>
+                <button type="button" class="swiperPrev swiperArrow">上一筆</button>
+                <button type="button" class="swiperNext swiperArrow">下一筆</button>
+                <div class="swiperPagination"></div>
+              </div>
+              <!-- Swiper end-->
+              <!-- more -->
+              <div class="moreBtn"><a href="#">瀏覽更多</a></div>
+
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- 新進書籍end -->
+      <!-- 有聲書start -->
+      <section>
+        <div class="container">
+          <div class="audioBooks flexTpl_12">
+            <div class="col">
+              <h2 class="sectionTitle">有聲書</h2>
+              <div class="sectionSubtitle">最新上架的精選書籍，搶先體驗最新內容</div>
+              <!-- Swiper start-->
+              <div class="booksSwiperBox">
+                <div class="swiper">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                      <!-- 資料內容 start-->
+                      <div class="booksBox">
+                        <div class="picgroup"><img src="images/books_pic01.jpg" alt="書名">
+                          <div class="collectbtn"><a href="#"><img src="images/icon_collectbtn.png" alt="收藏"></a></div>
+                          <div class="fileformat">
+                            <ul>
+                              <li>PDF</li>
+                              <li>EPUB</li>
+                            </ul>
+                          </div>
+                        </div>
+                        <div class="content">
+                          <div class="title">一個投機者的告白四部曲</div>
+                          <div class="author">安德烈．科斯托蘭尼</div>
+                          <div class="years">2024</div>
+                          <button type="button" class="btnPrimary"><span class="borrowingbtn">我要借閱</span></button>
+                        </div>
+                      </div>
+                      <!-- 資料內容 end-->
+                    </div>
+                    <div class="swiper-slide">
+                      <!-- 資料內容 start-->
+                      <div class="booksBox">
+                        <div class="picgroup"><img src="images/books_pic02.jpg" alt="書名">
+                          <div class="collectbtn"><a href="#"><img src="images/icon_collectbtn.png" alt="收藏"></a></div>
+                          <div class="fileformat">
+                            <ul>
+                              <li>PDF</li>
+                              <li>EPUB</li>
+                            </ul>
+                          </div>
+                        </div>
+                        <div class="content">
+                          <div class="title">萊拉</div>
+                          <div class="author">瑪莉蓮.羅賓遜</div>
+                          <div class="years">2024</div>
+                          <button type="button" class="btnPrimary"><span class="borrowingbtn">我要借閱</span></button>
+                        </div>
+                      </div>
+                      <!-- 資料內容 end-->
+                    </div>
+                    <div class="swiper-slide">
+                      <!-- 資料內容 start-->
+                      <div class="booksBox">
+                        <div class="picgroup"><img src="images/books_pic03.jpg" alt="書名">
+                          <div class="collectbtn"><a href="#"><img src="images/icon_collectbtn.png" alt="收藏"></a></div>
+                          <div class="fileformat">
+                            <ul>
+                              <li>PDF</li>
+                              <li>EPUB</li>
+                            </ul>
+                          </div>
+                        </div>
+                        <div class="content">
+                          <div class="title">Canva + AI創意設計與品牌應用250招</div>
+                          <div class="author">鄧君如 / 總監製</div>
+                          <div class="years">2024</div>
+                          <button type="button" class="btnPrimary"><span class="borrowingbtn">我要借閱</span></button>
+                        </div>
+                      </div>
+                      <!-- 資料內容 end-->
+                    </div>
+                    <div class="swiper-slide">
+                      <!-- 資料內容 start-->
+                      <div class="booksBox">
+                        <div class="picgroup"><img src="images/books_pic04.jpg" alt="書名">
+                          <div class="collectbtn"><a href="#"><img src="images/icon_collectbtn.png" alt="收藏"></a></div>
+                          <div class="fileformat">
+                            <ul>
+                              <li>PDF</li>
+                              <li>EPUB</li>
+                            </ul>
+                          </div>
+                        </div>
+                        <div class="content">
+                          <div class="title">東方美人</div>
+                          <div class="author">陳玉慧</div>
+                          <div class="years">2024</div>
+                          <button type="button" class="btnPrimary"><span class="borrowingbtn">我要借閱</span></button>
+                        </div>
+                      </div>
+                      <!-- 資料內容 end-->
+                    </div>
+                    <div class="swiper-slide">
+                      <!-- 資料內容 start-->
+                      <div class="booksBox">
+                        <div class="picgroup"><img src="images/books_pic05.jpg" alt="書名">
+                          <div class="collectbtn"><a href="#"><img src="images/icon_collectbtn.png" alt="收藏"></a></div>
+                          <div class="fileformat">
+                            <ul>
+                              <li>PDF</li>
+                              <li>EPUB</li>
+                            </ul>
+                          </div>
+                        </div>
+                        <div class="content">
+                          <div class="title">供應鏈戰爭：砂、鹽、鐵、銅、鋰、石油的戰略價值</div>
+                          <div class="author">埃德・康威</div>
+                          <div class="years">2023</div>
+                          <button type="button" class="btnPrimary"><span class="borrowingbtn">我要借閱</span></button>
+                        </div>
+                      </div>
+                      <!-- 資料內容 end-->
+                    </div>
+                    <div class="swiper-slide">
+                      <!-- 資料內容 start-->
+                      <div class="booksBox">
+                        <div class="picgroup"><img src="images/books_pic06.jpg" alt="書名">
+                          <div class="collectbtn"><a href="#"><img src="images/icon_collectbtn.png" alt="收藏"></a></div>
+                          <div class="fileformat">
+                            <ul>
+                              <li>PDF</li>
+                              <li>EPUB</li>
+                            </ul>
+                          </div>
+                        </div>
+                        <div class="content">
+                          <div class="title">人生五張表，你也可以FIRE</div>
+                          <div class="author">吳家揚</div>
+                          <div class="years">2021</div>
+                          <button type="button" class="btnPrimary"><span class="borrowingbtn">我要借閱</span></button>
+                        </div>
+                      </div>
+                      <!-- 資料內容 end-->
+                    </div>
+                    <div class="swiper-slide">
+                      <!-- 資料內容 start-->
+                      <div class="booksBox">
+                        <div class="picgroup"><img src="images/books_pic01.jpg" alt="書名">
+                          <div class="collectbtn"><a href="#"><img src="images/icon_collectbtn.png" alt="收藏"></a></div>
+                          <div class="fileformat">
+                            <ul>
+                              <li>PDF</li>
+                              <li>EPUB</li>
+                            </ul>
+                          </div>
+                        </div>
+                        <div class="content">
+                          <div class="title">一個投機者的告白四部曲</div>
+                          <div class="author">安德烈．科斯托蘭尼</div>
+                          <div class="years">2024</div>
+                          <button type="button" class="btnPrimary"><span class="borrowingbtn">我要借閱</span></button>
+                        </div>
+                      </div>
+                      <!-- 資料內容 end-->
+                    </div>
+                    <div class="swiper-slide">
+                      <!-- 資料內容 start-->
+                      <div class="booksBox">
+                        <div class="picgroup"><img src="images/books_pic01.jpg" alt="書名">
+                          <div class="collectbtn"><a href="#"><img src="images/icon_collectbtn.png" alt="收藏"></a></div>
+                          <div class="fileformat">
+                            <ul>
+                              <li>PDF</li>
+                              <li>EPUB</li>
+                            </ul>
+                          </div>
+                        </div>
+                        <div class="content">
+                          <div class="title">一個投機者的告白四部曲</div>
+                          <div class="author">安德烈．科斯托蘭尼</div>
+                          <div class="years">2024</div>
+                          <button type="button" class="btnPrimary"><span class="borrowingbtn">我要借閱</span></button>
+                        </div>
+                      </div>
+                      <!-- 資料內容 end-->
+                    </div>
+                    <div class="swiper-slide">
+                      <!-- 資料內容 start-->
+                      <div class="booksBox">
+                        <div class="picgroup"><img src="images/books_pic02.jpg" alt="書名">
+                          <div class="collectbtn"><a href="#"><img src="images/icon_collectbtn.png" alt="收藏"></a></div>
+                          <div class="fileformat">
+                            <ul>
+                              <li>PDF</li>
+                              <li>EPUB</li>
+                            </ul>
+                          </div>
+                        </div>
+                        <div class="content">
+                          <div class="title">萊拉</div>
+                          <div class="author">瑪莉蓮.羅賓遜</div>
+                          <div class="years">2024</div>
+                          <button type="button" class="btnPrimary"><span class="borrowingbtn">我要借閱</span></button>
+                        </div>
+                      </div>
+                      <!-- 資料內容 end-->
+                    </div>
+                    <div class="swiper-slide">
+                      <!-- 資料內容 start-->
+                      <div class="booksBox">
+                        <div class="picgroup"><img src="images/books_pic03.jpg" alt="書名">
+                          <div class="collectbtn"><a href="#"><img src="images/icon_collectbtn.png" alt="收藏"></a></div>
+                          <div class="fileformat">
+                            <ul>
+                              <li>PDF</li>
+                              <li>EPUB</li>
+                            </ul>
+                          </div>
+                        </div>
+                        <div class="content">
+                          <div class="title">Canva + AI創意設計與品牌應用250招</div>
+                          <div class="author">鄧君如 / 總監製</div>
+                          <div class="years">2024</div>
+                          <button type="button" class="btnPrimary"><span class="borrowingbtn">我要借閱</span></button>
+                        </div>
+                      </div>
+                      <!-- 資料內容 end-->
+                    </div>
+                    <div class="swiper-slide">
+                      <!-- 資料內容 start-->
+                      <div class="booksBox">
+                        <div class="picgroup"><img src="images/books_pic04.jpg" alt="書名">
+                          <div class="collectbtn"><a href="#"><img src="images/icon_collectbtn.png" alt="收藏"></a></div>
+                          <div class="fileformat">
+                            <ul>
+                              <li>PDF</li>
+                              <li>EPUB</li>
+                            </ul>
+                          </div>
+                        </div>
+                        <div class="content">
+                          <div class="title">東方美人</div>
+                          <div class="author">陳玉慧</div>
+                          <div class="years">2024</div>
+                          <button type="button" class="btnPrimary"><span class="borrowingbtn">我要借閱</span></button>
+                        </div>
+                      </div>
+                      <!-- 資料內容 end-->
+                    </div>
+                    <div class="swiper-slide">
+                      <!-- 資料內容 start-->
+                      <div class="booksBox">
+                        <div class="picgroup"><img src="images/books_pic05.jpg" alt="書名">
+                          <div class="collectbtn"><a href="#"><img src="images/icon_collectbtn.png" alt="收藏"></a></div>
+                          <div class="fileformat">
+                            <ul>
+                              <li>PDF</li>
+                              <li>EPUB</li>
+                            </ul>
+                          </div>
+                        </div>
+                        <div class="content">
+                          <div class="title">供應鏈戰爭：砂、鹽、鐵、銅、鋰、石油的戰略價值</div>
+                          <div class="author">埃德・康威</div>
+                          <div class="years">2023</div>
+                          <button type="button" class="btnPrimary"><span class="borrowingbtn">我要借閱</span></button>
+                        </div>
+                      </div>
+                      <!-- 資料內容 end-->
+                    </div>
+                    <div class="swiper-slide">
+                      <!-- 資料內容 start-->
+                      <div class="booksBox">
+                        <div class="picgroup"><img src="images/books_pic06.jpg" alt="書名">
+                          <div class="collectbtn"><a href="#"><img src="images/icon_collectbtn.png" alt="收藏"></a></div>
+                          <div class="fileformat">
+                            <ul>
+                              <li>PDF</li>
+                              <li>EPUB</li>
+                            </ul>
+                          </div>
+                        </div>
+                        <div class="content">
+                          <div class="title">人生五張表，你也可以FIRE</div>
+                          <div class="author">吳家揚</div>
+                          <div class="years">2021</div>
+                          <button type="button" class="btnPrimary"><span class="borrowingbtn">我要借閱</span></button>
+                        </div>
+                      </div>
+                      <!-- 資料內容 end-->
+                    </div>
+                    <div class="swiper-slide">
+                      <!-- 資料內容 start-->
+                      <div class="booksBox">
+                        <div class="picgroup"><img src="images/books_pic01.jpg" alt="書名">
+                          <div class="collectbtn"><a href="#"><img src="images/icon_collectbtn.png" alt="收藏"></a></div>
+                          <div class="fileformat">
+                            <ul>
+                              <li>PDF</li>
+                              <li>EPUB</li>
+                            </ul>
+                          </div>
+                        </div>
+                        <div class="content">
+                          <div class="title">一個投機者的告白四部曲</div>
+                          <div class="author">安德烈．科斯托蘭尼</div>
+                          <div class="years">2024</div>
+                          <button type="button" class="btnPrimary"><span class="borrowingbtn">我要借閱</span></button>
+                        </div>
+                      </div>
+                      <!-- 資料內容 end-->
+                    </div>
+
+                  </div>
+                </div>
+                <button type="button" class="swiperPrev swiperArrow">上一筆</button>
+                <button type="button" class="swiperNext swiperArrow">下一筆</button>
+                <div class="swiperPagination"></div>
+              </div>
+              <!-- Swiper end-->
+              <!-- more -->
+              <div class="moreBtn"><a href="#">瀏覽更多</a></div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- 有聲書 end-->
+      <!-- 合作圖書館 start -->
+      <section>
+        <div class="container">
+          <div class="partnerLibraries flexTpl_12">
+            <div class="col">
+              <h2 class="sectionTitle">合作圖書館</h2>
+              <div class="sectionSubtitle">與全台各地優質圖書館攜手合作，提供豐富多元的電子書資源</div>
+              <!-- Swiper start-->
+              <div class="librariesSwiperBox">
+                <div class="swiper">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                      <!-- 圖書館資料 start-->
+                      <div class="librariesBox">
+                        <a href="#">
+                          <div class="piclogo"><img src="images/libraries_logo01.jpg" alt="圖書館logo"></div>
+                          <div class="content">
+                            <ul>
+                              <li><span>電子書種類</span><span class="num">886</span></li>
+                              <li><span>電子書冊數</span><span class="num">1415</span></li>
+                            </ul>
+                          </div>
+                        </a>
+                      </div>
+                      <!-- 圖書館資料 end-->
+                    </div>
+                    <div class="swiper-slide">
+                      <!-- 圖書館資料 start-->
+                      <div class="librariesBox">
+                        <a href="#">
+                          <div class="piclogo"><img src="images/libraries_logo02.jpg" alt="圖書館logo"></div>
+                          <div class="content">
+                            <ul>
+                              <li><span>電子書種類</span><span class="num">886</span></li>
+                              <li><span>電子書冊數</span><span class="num">1415</span></li>
+                            </ul>
+                          </div>
+                        </a>
+                      </div>
+                      <!-- 圖書館資料 end-->
+                    </div>
+                    <div class="swiper-slide">
+                      <!-- 圖書館資料 start-->
+                      <div class="librariesBox">
+                        <a href="#">
+                          <div class="piclogo"><img src="images/libraries_logo03.jpg" alt="圖書館logo"></div>
+                          <div class="content">
+                            <ul>
+                              <li><span>電子書種類</span><span class="num">886</span></li>
+                              <li><span>電子書冊數</span><span class="num">1415</span></li>
+                            </ul>
+                          </div>
+                        </a>
+                      </div>
+                      <!-- 圖書館資料 end-->
+                    </div>
+                    <div class="swiper-slide">
+                      <!-- 圖書館資料 start-->
+                      <div class="librariesBox">
+                        <a href="#">
+                          <div class="piclogo"><img src="images/libraries_logo04.jpg" alt="圖書館logo"></div>
+                          <div class="content">
+                            <ul>
+                              <li><span>電子書種類</span><span class="num">886</span></li>
+                              <li><span>電子書冊數</span><span class="num">1415</span></li>
+                            </ul>
+                          </div>
+                        </a>
+                      </div>
+                      <!-- 圖書館資料 end-->
+                    </div>
+                    <div class="swiper-slide">
+                      <!-- 圖書館資料 start-->
+                      <div class="librariesBox">
+                        <a href="#">
+                          <div class="piclogo"><img src="images/libraries_logo05.jpg" alt="圖書館logo"></div>
+                          <div class="content">
+                            <ul>
+                              <li><span>電子書種類</span><span class="num">886</span></li>
+                              <li><span>電子書冊數</span><span class="num">1415</span></li>
+                            </ul>
+                          </div>
+                        </a>
+                      </div>
+                      <!-- 圖書館資料 end-->
+                    </div>
+                    <div class="swiper-slide">
+                      <!-- 圖書館資料 start-->
+                      <div class="librariesBox">
+                        <a href="#">
+                          <div class="piclogo"><img src="images/libraries_logo05.jpg" alt="圖書館logo"></div>
+                          <div class="content">
+                            <ul>
+                              <li><span>電子書種類</span><span class="num">886</span></li>
+                              <li><span>電子書冊數</span><span class="num">1415</span></li>
+                            </ul>
+                          </div>
+                        </a>
+                      </div>
+                      <!-- 圖書館資料 end-->
+                    </div>
+                  </div>
+                </div>
+                <button type="button" class="swiperPrev swiperArrow">上一筆</button>
+                <button type="button" class="swiperNext swiperArrow">下一筆</button>
+                <div class="swiperPagination"></div>
+              </div>
+              <!-- Swiper end-->
+
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- 合作圖書館 end-->
+    </main>
+    <!-- main End -->
+
+    <!-- footer Start-->
+    <footer>
+      <a class="accessKeyItem" href="#aZ" id="aZ" accesskey="Z" aria-label="頁尾區">:::</a>
+      <div class="container">
+        <div class="infoBox">
+          <div class="leftcontent">
+            <div class="leftgroup">
+              <div class="footerLogo">
+                <a href="index.html"><img src="images/footer_logo.png" alt="網站標題" /></a>
+              </div>
+              <div class="shareBox">
+                <ul>
+                  <li>
+                    <a href="#"><img src="images/basic/icon/share/x.svg" alt="x" /></a>
+                  </li>
+                  <li>
+                    <a href="#"><img src="images/basic/icon/share/instagram.svg" alt="instagram" /></a>
+                  </li>
+                  <li>
+                    <a href="#"><img src="images/basic/icon/share/youtube.svg" alt="youtube" /></a>
+                  </li>
+                  <li>
+                    <a href="#"><img src="images/basic/icon/share/facebook.svg" alt="facebook" /></a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+          </div>
+          <div class="rightcontent">
+            <div class="footermenu">
+              <ul>
+                <li><a href="#">服務導覽</a>
+                  <ul>
+                    <li><a href="#">關於本館</a></li>
+                    <li><a href="#">電子書借閱</a></li>
+                    <li><a href="#">數位學習</a></li>
+                    <li><a href="#">館藏查詢</a></li>
+                    <li><a href="#">最新公告</a></li>
+                  </ul>
+                </li>
+                <li><a href="#">讀者服務</a>
+                  <ul>
+                    <li><a href="#">使用說明</a></li>
+                    <li><a href="#">常見問題</a></li>
+                    <li><a href="#">閱讀指導</a></li>
+                    <li><a href="#">技術支援</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+            <div class="footerRelatedmater">
+              <div class="footermaterBox">
+                <div class="title">聯絡資訊</div>
+                <ul>
+                  <li>地址：402011臺中市南區五權南路100號</li>
+                  <li>電話：(04)2262-5100 #123</li>
+                  <li>e-mail：service@nlpi.edu.tw</li>
+                </ul>
+              </div>
+              <div class="footermaterBox">
+                <div class="title consult">電子書問題諮詢</div>
+                <ul>
+                  <li>請點選「<a href="#">意見反映</a>」</li>
+                </ul>
+
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="copyrightBox">
+          <div class="copyright">© 2025 國立公共資訊圖書館電子書服務平台。版權所有。</div>
+          <ul class="footerLink">
+            <li><a href="#">隱私權及資訊安全宣告</a></li>
+            <li><a href="#">服務條款</a></li>
+            <li><a href="#">網站地圖</a></li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+    <!-- footer End-->
+  </div>
+
+
+  <!-- wrapper End -->
+
+  <!-- 回到頂部 Start -->
+  <button type="button" id="scrollTop" aria-label="回到頂部">TOP</button>
+  <!-- 回到頂部 End -->
+  <!-- JQ -->
+  <script src="vendor/jquery-3.7.1.min.js"></script>
+  <!-- fancyBox -->
+  <script src="vendor/fancybox/fancybox.umd.js"></script>
+  <script src="vendor/fancybox/l10n/zh_TW.umd.js"></script>
+  <!-- Swiper -->
+  <script src="vendor/swiper/swiper-bundle.min.js"></script>
+
+  <!-- js -->
+  <script src="js/mainJq.js"></script>
+  <script src="js/customize.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,1029 @@
+@use 'sass:color';
+@use 'sass:math';
+@use 'sass:map';
+@use '../variable' as *; //變數
+@use '../basic/mixin' as *; //mixin
+
+// 共用
+// .sectionTitle {
+//   text-align: center;
+//   margin: 0 0 34px;
+// }
+
+// section {
+//   & + section {
+//     padding-top: 20px;
+//     padding-bottom: 20px;
+
+//     @include screen('mobile') {
+//       padding-top: 20px;
+//       padding-bottom: 20px;
+//     }
+//   }
+
+//   &:last-child {
+//     padding-bottom: 0;
+//   }
+
+//   // .container {
+//   //   max-width: 1370px;
+//   // }
+// }
+
+.indexBtn {
+  color: #fff;
+  min-width: 120px;
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 4px 16px 4px 24px;
+
+  &::after {
+    content: '';
+    width: 10px;
+    height: 10px;
+    border: 2px solid #fff;
+    border-width: 2px 2px 0 0;
+    transform: rotate(45deg);
+  }
+
+  &:hover {
+    color: #fff;
+  }
+}
+
+*:has(.flexFull) {
+  .mpSlider,
+  .swiperBox {
+    margin-top: 0;
+  }
+}
+
+//
+// 首頁大標題
+%sectionTitle {
+  background-image: url('../images/sectionTitle_bg.png');
+  padding-top: 70px;
+  background-repeat: no-repeat;
+  background-position: center top;
+  font-family: 'NotoSerifHK', serif;
+  font-size: Rem(36);
+  color: $colorSecondaryDark;
+  letter-spacing: 0.15em;
+  margin-bottom: 15px;
+  text-align: center;
+}
+// 首頁副標題
+%sectionSubtitle {
+  text-align: center;
+  font-size: Rem(18);
+  margin-bottom: 50px;
+  color: $colorPrimaryDark;
+  font-weight: 500;
+  line-height: 1.7;
+}
+// 首頁大圖輪播
+.mpSlider {
+  .swiper-slide {
+    .slidecontent {
+      position: relative;
+      width: 100%;
+    }
+
+    .slidecontent {
+      .pic img {
+        display: block;
+        width: 100%;
+        height: auto;
+        aspect-ratio: 16 / 4;
+        object-fit: cover;
+        transition: 0.5s;
+        @media (max-width: 1200px) {
+          aspect-ratio: 16 / 5;
+        }
+        @include screen('tablet') {
+          aspect-ratio: 16 /7;
+        }
+        @include screen('mobile') {
+          aspect-ratio: 16 /11;
+        }
+        @include screen('xsMobile') {
+          aspect-ratio: 16 /13;
+        }
+        @media (max-width: 500px) {
+          aspect-ratio: 16 /15;
+        }
+        @media (max-width: 420px) {
+          aspect-ratio: 16 /18;
+        }
+      }
+    }
+
+    .text_content {
+      position: absolute;
+      top: 50%;
+      left: 11.19vw;
+      right: 11.19vw;
+      color: #fff;
+      z-index: 2;
+      transition: 0.5s;
+      transform: translateY(-50%);
+      @include screen('mobile') {
+        left: 15vw;
+        right: 15vw;
+      }
+      @include screen('xsMobile') {
+      }
+      .title {
+        font-size: clamp(2.5em, calc((42px / 1920px) * 100vw), 2.625em);
+        margin-bottom: 10px;
+        padding: 10px 5px;
+        line-height: 1.4em;
+        text-shadow: 0px 3px 13px #1b1b1b;
+        font-family: 'NotoSerifHK', serif;
+        @include lineClamp(2);
+      }
+      p {
+        margin: 0 0 20px;
+        padding: 6px 5px;
+        line-height: 1.5em;
+        font-weight: 500;
+        font-size: clamp(1.25em, calc((22px / 1920px) * 100vw), 1.375em);
+        text-shadow: 0px 3px 13px #1b1b1b;
+        color: #fff;
+        @include lineClamp(2);
+      }
+      .slidebtn {
+        a {
+          display: inline-block;
+          padding: 1.85vh 70px 1.85vh 30px;
+          background-color: rgba(0, 0, 0, 0.8);
+          color: #fff;
+          text-decoration: none;
+          border-radius: 50px;
+          font-size: clamp(1.125em, calc((20px / 1920px) * 100vw), 1.25em);
+          background-image: url('../images/icon_arrow.svg');
+          background-repeat: no-repeat;
+          background-position: right 26px center;
+          background-size: 32px 10px;
+          transition: 0.5s;
+          min-width: 180px;
+
+          &:hover {
+            background-position: right 20px center;
+            background-color: #000;
+          }
+        }
+      }
+    }
+    &.swiper-slide-active {
+      .title {
+        animation-name: bigworddynamic;
+        animation-duration: 3s;
+      }
+      p {
+        animation-name: smallworddynamic;
+        animation-duration: 3s;
+      }
+      .slidebtn {
+        animation-name: btndynamic;
+        animation-duration: 3s;
+      }
+    }
+    @keyframes bigworddynamic {
+      0% {
+        transform: translateY(-70px);
+        opacity: 0;
+      }
+
+      100% {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+    @keyframes smallworddynamic {
+      0% {
+        transform: translateX(70px);
+        opacity: 0;
+      }
+
+      100% {
+        transform: translateX(0);
+        opacity: 1;
+      }
+    }
+    @keyframes btndynamic {
+      0% {
+        transform: translateY(70px);
+        opacity: 0;
+      }
+
+      100% {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+  }
+}
+//跑馬燈輪播
+section:has(.marqueeSlider) {
+  background-color: $colorPrimary !important;
+  color: #fff;
+}
+.marqueeSlider {
+  position: relative;
+  .closebtn {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}
+// 推薦好書
+section:has(.recommendedBooks) {
+  padding: 110px 0 180px;
+  background-image: url('../images/curveBg01.png'), radial-gradient(circle 35vw at 0% 20%, rgba(251, 202, 189, 0.7) 0%, rgba(251, 202, 189, 0.1) 100%), radial-gradient(circle 50vw at 100% 90%, rgba(251, 202, 189, 0.7) 0%, rgba(251, 202, 189, 0.1) 100%),
+    radial-gradient(circle 25vw at 0% 90%, rgba(251, 202, 189, 0.6) 0%, rgba(251, 202, 189, 0) 100%);
+
+  background-repeat: no-repeat;
+  background-position: right top, left top, right bottom, left bottom;
+}
+.recommendedBooks {
+  .sectionTitle {
+    @extend %sectionTitle;
+  }
+  .sectionSubtitle {
+    @extend %sectionSubtitle;
+  }
+}
+// 書輪播
+.booksSwiperBox {
+  position: relative;
+  margin-bottom: 70px;
+  .swiper {
+    width: 100%;
+    height: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .swiper-wrapper {
+    .swiper-slide {
+      font-size: Rem(18);
+      padding: 20px 10px;
+      flex-shrink: 0;
+      width: auto;
+      .booksBox {
+        background-color: #fff;
+        border-radius: 10px;
+        padding: 6px 6px 20px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+        .picgroup {
+          width: 100%;
+          overflow: hidden;
+          margin-bottom: 12px;
+          position: relative;
+          aspect-ratio: 3/3.5;
+          background-color: #eee;
+          img {
+            position: absolute;
+            max-width: 100%;
+            max-height: 100%;
+            inset: 0;
+            margin: auto;
+          }
+          .collectbtn {
+            position: absolute;
+            top: 13px;
+            right: 9px;
+            a {
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              width: 42px;
+              height: 42px;
+              border-radius: 50%;
+              background-color: rgba(0, 0, 0, 0.5);
+              transition: 0.5s;
+              img {
+                width: 20px;
+                height: 19px;
+              }
+              &:hover {
+                background-color: #000;
+              }
+              &.active {
+                background-color: $colorPrimary;
+              }
+            }
+          }
+          .fileformat {
+            position: absolute;
+            bottom: 6px;
+            left: 6px;
+            ul {
+              @include liReset;
+              display: flex;
+              li {
+                background-color: rgba(0, 0, 0, 0.5);
+                padding: 5px 7px;
+                border-radius: 5px;
+                margin-right: 3px;
+                font-size: Rem(16);
+                color: #fff;
+                display: block;
+                line-height: 0.8;
+              }
+            }
+          }
+        }
+        .content {
+          padding: 0 8px;
+        }
+        .title {
+          color: $colorWord;
+          margin-bottom: 12px;
+          font-weight: 500;
+          @include lineClamp(3);
+          line-height: 1.4em;
+          height: calc(1.4em * 3);
+        }
+        .author,
+        .years {
+          color: $colorWordLight;
+          margin-bottom: 10px;
+        }
+        .author {
+          line-height: 1.3em;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+          overflow: hidden;
+        }
+        button {
+          width: 100%;
+        }
+      }
+    }
+  }
+  .swiperArrow {
+    &.swiperPrev {
+      left: -2.08vw;
+    }
+
+    &.swiperNext {
+      right: -2.08vw;
+    }
+  }
+  .swiperPagination {
+    position: absolute;
+    bottom: -40px;
+    height: 30px;
+    z-index: 9;
+    top: auto;
+  }
+}
+// 主題書展
+section:has(.themedBookfair) {
+  padding: 10px 0 100px;
+  position: relative;
+  isolation: isolate;
+  &:before {
+    content: '';
+    width: 24.3vw;
+    height: calc(100% + 160px);
+    position: absolute;
+    top: -160px;
+    left: 0;
+    background: #f6cfc3;
+    background: linear-gradient(90deg, rgba(246, 207, 195, 0) 10%, rgba(246, 207, 195, 0.8) 90%), url('../images/mainbg.jpg');
+    background-repeat: repeat;
+    background-position: left top;
+    z-index: 0;
+    border-radius: 0% 150% 0 0 / 0 13% 0 0;
+  }
+  &:after {
+    content: '';
+    width: calc(100vw - 24.3vw);
+    height: calc(100% + 80px);
+    position: absolute;
+    top: -80px;
+    right: 0;
+    background: #fbc7b6;
+    background: linear-gradient(90deg, rgba(251, 191, 168, 0.7) 4%, rgba(251, 191, 168, 0) 90%), url('../images/mainbg.jpg');
+    background-repeat: repeat;
+    background-position: left top;
+    z-index: -1;
+    border-radius: 50% 80% 0 0 / 6% 0 0 0;
+  }
+  // background: linear-gradient(90deg, rgba(246, 207, 194, 0.28) 0%, rgba(246, 207, 194, 0.82) 23%, rgba(246, 207, 194, 0.8) 23%, rgba(246, 207, 194, 0) 23%, rgba(246, 207, 194, 0) 100%),
+  //   linear-gradient(90deg, rgba(250, 204, 189, 0) 0%, rgba(250, 204, 189, 0) 23%, rgba(250, 204, 189, 0.9) 23%, rgba(250, 204, 189, 0.9) 65%, rgba(250, 204, 189, 0.1) 100%);
+
+  .container {
+    position: relative;
+    // &:before {
+    //   content: '';
+    //   background-image: url('../images/themedBookfair_bg.png');
+    //   background-position: center top;
+    //   background-repeat: no-repeat;
+    //   height: 137px;
+    //   position: absolute;
+    //   top: -137px;
+    // }
+  }
+}
+.themedBookfair {
+  .sectionTitle {
+    @extend %sectionTitle;
+    margin-bottom: 40px;
+  }
+  .bookfairBox {
+    display: flex;
+    margin-bottom: 40px;
+
+    .leftBox {
+      flex: 1 1 auto;
+      // flex-basis: calc(1440px - 30.55vw - 50px);
+      position: relative;
+      padding-right: 50px;
+      .bookfairneme {
+        font-size: Rem(20);
+        font-weight: 500;
+        margin-bottom: 25px;
+      }
+      .title {
+        font-size: Rem(45);
+        font-weight: 600;
+        margin-bottom: 20px;
+        color: $colorPrimaryDark;
+        line-height: 1.2;
+      }
+      .time {
+        font-size: Rem(16);
+        margin-bottom: 15px;
+        color: $colorPrimaryDark;
+        font-weight: 500;
+      }
+      p {
+        font-size: Rem(18);
+        margin-bottom: 5.55vh;
+      }
+      .bookfairSwiperBox {
+        position: relative;
+        width: 95%;
+        margin: 0;
+        .swiper-slide {
+          padding: 8px;
+          .bookCover {
+            a {
+              display: flex;
+              justify-content: center;
+              img {
+                outline: 4px solid transparent;
+                transition: 0.5s;
+              }
+              &:hover {
+                img {
+                  outline: 4px solid #fff;
+                }
+              }
+            }
+          }
+        }
+        .swiperArrow {
+          &.swiperPrev {
+            left: -2.08vw;
+          }
+
+          &.swiperNext {
+            right: -2.08vw;
+          }
+        }
+      }
+    }
+    .rightBox {
+      position: relative;
+      flex: 0 0 auto;
+      flex-basis: 440px;
+      // flex-basis: 30.55vw;
+      transition: 0.5s;
+
+      .bookfairBig {
+        background-color: #fafafa;
+        border-radius: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 5.09vh 1.82vw;
+        border: 4px solid #fff;
+        box-shadow: 0 4px 40px rgba(0, 0, 0, 0.15);
+        position: relative;
+        // aspect-ratio: 3/ 4;
+        // box-sizing: border-box;
+        a {
+          img {
+            width: 100%;
+            outline: 3px solid transparent;
+            transition: 0.5s;
+          }
+          &:hover {
+            img {
+              outline: 3px solid $colorPrimary;
+            }
+          }
+        }
+      }
+      @include screen('tablet') {
+        flex-basis: 300px;
+      }
+    }
+    @media (max-width: 800px) {
+      flex-wrap: wrap;
+      .leftBox {
+        flex: 1 1 auto;
+        flex-basis: 100%;
+        order: 2;
+        padding-right: 0;
+        .bookfairSwiperBox {
+          width: 100%;
+        }
+      }
+      .rightBox {
+        flex: 1 1 auto;
+        order: 1;
+        margin-bottom: 30px;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        .bookfairBig {
+          width: 300px;
+        }
+      }
+    }
+  }
+  .bookfairlistBox {
+    background-color: rgba(250, 136, 76, 0.25);
+    padding: 55px 40px;
+    border-radius: 20px;
+    position: relative;
+    margin-bottom: 50px;
+    transition: 0.5s;
+    @media (max-width: 630px) {
+      padding: 45px 30px;
+    }
+    @media (max-width: 430px) {
+      padding: 40px 30px;
+    }
+    .bookfairlistSwiperBox {
+      .swiper-slide {
+        .bookfairlist {
+          padding: 8px;
+          a {
+            display: block;
+            text-decoration: none;
+            transition: 0.5s;
+
+            .pic {
+              width: 100%;
+              overflow: hidden;
+              margin-bottom: 20px;
+              position: relative;
+              img {
+                aspect-ratio: 3/4.26;
+                width: 100%;
+              }
+            }
+            .title {
+              font-size: Rem(20);
+              color: $colorPrimaryDark;
+              text-overflow: ellipsis;
+              white-space: nowrap;
+              overflow: hidden;
+              margin-bottom: 15px;
+              font-weight: 500;
+            }
+            .time {
+              font-size: Rem(16);
+              color: $colorPrimaryDark;
+              font-weight: 500;
+              line-height: 1.5;
+            }
+            &:hover {
+              box-shadow: 0 0 0 4px #fff;
+            }
+          }
+        }
+      }
+      .swiperArrow {
+        &.swiperPrev {
+          left: -2.08vw;
+        }
+
+        &.swiperNext {
+          right: -2.08vw;
+        }
+      }
+    }
+  }
+}
+// 熱門書籍
+section:has(.popularBooks) {
+  padding: 110px 0 130px;
+  background-image: url('../images/curveBg02.png'), url('../images/curveBg03.png'), radial-gradient(circle 35vw at 90% 0%, rgba(251, 196, 180, 0.9) 0%, rgba(251, 196, 180, 0.1) 100%), radial-gradient(circle 45vw at 0% 50%, rgba(251, 196, 180, 0.9) 0%, rgba(251, 196, 180, 0) 100%),
+    radial-gradient(circle 45vw at 0% 90%, rgba(251, 196, 180, 0.9) 0%, rgba(251, 196, 180, 0) 100%), radial-gradient(circle 25vw at 100% 100%, rgba(251, 196, 180, 0.7) 0%, rgba(251, 196, 180, 0) 100%);
+  background-repeat: no-repeat;
+  background-position: left top, right -3.64vw bottom 110px, right top, left top, left top, right bottom;
+}
+.popularBooks {
+  .sectionTitle {
+    @extend %sectionTitle;
+    margin-bottom: 50px;
+  }
+  .sortBox {
+    ul {
+      @include liReset();
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      li {
+        flex: 0 0 auto;
+        margin: 0 15px 15px 0;
+
+        a {
+          display: flex;
+          padding: 20px 28px;
+          justify-content: center;
+          align-items: center;
+          background-color: #fff;
+          border-radius: 50px;
+          color: $colorPrimary;
+          font-size: Rem(18);
+          border: 1px solid $colorPrimary;
+          text-decoration: none;
+          transition: 0.5s;
+          &.active,
+          &:hover {
+            background-color: $colorPrimary;
+            color: #fff;
+          }
+        }
+      }
+    }
+  }
+  // 相關書籍區資料
+  .relatedbooksMater {
+    width: 95%;
+    margin: 0 auto;
+    display: flex;
+    gap: 30px;
+    margin-top: 100px;
+    @include screen('tablet') {
+      width: 100%;
+      display: block;
+    }
+    .customAreaBlock,
+    .appropriateageBlock {
+      background-color: #eee;
+      border-radius: 20px;
+      padding: 50px;
+      text-align: center;
+      flex: 0 0 auto;
+      flex-basis: 50%;
+      @include screen('xsMobile') {
+        padding: 50px 20px;
+      }
+      .title {
+        color: $colorWordDark;
+        font-size: Rem(36);
+        font-weight: 500;
+        margin-bottom: 25px;
+        font-family: 'NotoSerifHK', serif;
+      }
+      p {
+        text-align: left;
+        font-size: Rem(22);
+        margin-bottom: 30px;
+      }
+      .learnBtn,
+      .searchmoreBtn {
+        text-align: center;
+        a {
+          padding: 16px;
+          display: inline-block;
+          background-color: rgba(0, 0, 0, 0.8);
+          color: #fff;
+          text-align: center;
+          text-decoration: none;
+          min-width: 210px;
+          border-radius: 50px;
+          transition: 0.5s;
+
+          span {
+            padding-left: 30px;
+            background-repeat: no-repeat;
+          }
+          &:hover {
+            background-color: rgba(0, 0, 0, 1);
+          }
+        }
+      }
+      .learnBtn {
+        a {
+          span {
+            background-image: url('../images/icon_book02.svg');
+            background-position: left 3px;
+            background-size: 16px 20px;
+          }
+        }
+      }
+      .searchmoreBtn {
+        a {
+          span {
+            background-image: url('../images/basic/icon/search_w.svg');
+            background-position: left 2px;
+            background-size: 22px;
+          }
+        }
+      }
+    }
+    // .customAreaBlock p {
+    //   @include lineClamp(5);
+    //   line-height: 1.7em;
+    //   height: calc(1.7em * 5);
+    // }
+    .customAreaBlock {
+      background-image: url('../images/customAreaBlock_bg.jpg');
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      @include screen('tablet') {
+        margin-bottom: 30px;
+      }
+    }
+    .appropriateageBlock {
+      background-image: url('../images/appropriateageBlock_bg.jpg');
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+
+      p {
+        text-align: center;
+      }
+      .gradeSwiperBox {
+        position: relative;
+        padding: 0 100px;
+        margin-bottom: 40px;
+        @media (max-width: 1200px) {
+          padding: 0 80px;
+        }
+        @include screen('xsMobile') {
+          padding: 0 50px;
+        }
+        .swiper {
+          padding: 10px 0;
+        }
+        .grade {
+          text-align: center;
+          display: flex;
+          justify-content: center;
+
+          a {
+            background-color: #c57e0c;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            padding: 10px;
+            border-radius: 10px;
+            color: #fff;
+            font-size: Rem(20);
+            font-weight: 500;
+            text-decoration: none;
+            width: 100px;
+            height: 96px;
+            box-sizing: border-box;
+            transition: 0.5s;
+            &.no02 {
+              background-color: #c83d36;
+            }
+            &.no03 {
+              background-color: #5e7c15;
+            }
+            &.no04 {
+              background-color: #14699e;
+            }
+
+            &.no05 {
+              background-color: #4d219d;
+            }
+            &.no06 {
+              background-color: #9c219d;
+            }
+            &.no07 {
+              background-color: #a8542b;
+            }
+            &.no08 {
+              background-color: #6fa82b;
+            }
+            &.no09 {
+              background-color: #448c90;
+            }
+            &.no10 {
+              background-color: #a7476e;
+            }
+            &.no11 {
+              background-color: #ad942e;
+            }
+            &.no12 {
+              background-color: #2d7768;
+            }
+            &.no12higher {
+              background-color: #727094;
+            }
+
+            span {
+              flex: 1 1 auto;
+              flex-basis: 100%;
+              font-size: Rem(36);
+              font-weight: 700;
+              margin-bottom: 5px;
+              display: flex;
+              justify-content: center;
+              em {
+                font-size: Rem(17);
+                font-style: normal;
+                line-height: 1.2em;
+                flex: 0 0 30px;
+              }
+            }
+            &:hover {
+              transform: translateY(-8px);
+            }
+          }
+        }
+        .swiperArrow {
+          background-color: transparent;
+          &:hover {
+            background-color: rgba(255, 255, 255, 0.5);
+          }
+          &.swiperArrow-disabled {
+            background: transparent !important;
+          }
+          &:before {
+            width: 30px;
+            height: 44px;
+            background-image: url(../vendor/swiper/ar.svg);
+            background-size: 30px 44px;
+            @include screenMax('1200') {
+              width: 20px;
+              height: 30px;
+              background-size: 20px 30px;
+            }
+          }
+          &.swiperPrev {
+            left: 0;
+          }
+
+          &.swiperNext {
+            right: 0;
+          }
+        }
+      }
+    }
+  }
+}
+// 新進書籍
+section:has(.newBooks) {
+  padding: 110px 0 100px;
+  background-image: url('../images/newBooksBb.jpg');
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: cover;
+}
+.newBooks {
+  .sectionTitle {
+    @extend %sectionTitle;
+  }
+  .sectionSubtitle {
+    @extend %sectionSubtitle;
+  }
+  .booksSwiperBox {
+    .swiper {
+      mask-image: linear-gradient(90deg, transparent 0%, rgb(0, 0, 0) 20% 80%, transparent 100%);
+    }
+  }
+}
+// 有聲書
+section:has(.audioBooks) {
+  padding: 110px 0 100px;
+  background-image: url('../images/curveBg04.png'), radial-gradient(circle 55vw at 0% 0%, rgba(246, 163, 139, 0.9) 0%, rgba(246, 163, 139, 0.1) 100%);
+  background-repeat: no-repeat;
+  background-position: right top, left top;
+}
+.audioBooks {
+  .sectionTitle {
+    @extend %sectionTitle;
+  }
+  .sectionSubtitle {
+    @extend %sectionSubtitle;
+  }
+  .booksSwiperBox {
+  }
+}
+// 合作圖書館
+section:has(.partnerLibraries) {
+  padding: 110px 0 100px;
+  background: #fcc8b9;
+  background: linear-gradient(180deg, rgba(252, 200, 185, 0.67) 0%, rgba(252, 200, 185, 0) 100%);
+  background-repeat: no-repeat;
+  background-position: center top;
+}
+.partnerLibraries {
+  .sectionTitle {
+    @extend %sectionTitle;
+  }
+  .sectionSubtitle {
+    @extend %sectionSubtitle;
+  }
+  .librariesSwiperBox {
+    position: relative;
+    .swiper {
+      mask-image: linear-gradient(90deg, transparent 0%, rgb(0, 0, 0) 20% 80%, transparent 100%);
+      margin-bottom: 20px;
+    }
+    .swiper-slide {
+      padding: 10px;
+    }
+    .librariesBox {
+      a {
+        display: block;
+        background-color: #fff;
+        padding: 13px;
+        box-shadow: 0 0 16px rgba(0, 0, 0, 0.15);
+        border-radius: 5px;
+        text-decoration: none;
+        transition: 0.5s;
+        color: $colorWordDark;
+
+        .piclogo {
+          width: 100%;
+          height: 77px;
+          border: 1px solid #eee;
+          display: flex;
+          align-items: center;
+
+          img {
+            width: 100%;
+            max-height: 100%;
+          }
+        }
+        .content {
+          padding: 20px 0;
+          ul {
+            @include liReset();
+            li {
+              display: flex;
+              font-size: Rem(18);
+              margin-bottom: 10px;
+              font-weight: 500;
+              justify-content: space-between;
+              padding-left: 28px;
+
+              span {
+                flex: 1 1 auto;
+                line-height: 1.3;
+                &.num {
+                  color: $colorError;
+                  text-align: right;
+                }
+              }
+              &:first-child {
+                background-image: url('../images/icon_book02_b.svg');
+                background-position: left center;
+                background-repeat: no-repeat;
+                background-size: 22px 20px;
+              }
+              &:nth-child(2) {
+                background-image: url('../images/icon_book01_b.svg');
+                background-position: left center;
+                background-repeat: no-repeat;
+                background-size: 22px 20px;
+              }
+            }
+          }
+        }
+        &:hover {
+          transform: translateY(-10px);
+        }
+      }
+    }
+    .swiperArrow {
+      &.swiperPrev {
+        left: -2.08vw;
+      }
+
+      &.swiperNext {
+        right: -2.08vw;
+      }
+    }
+  }
+}
