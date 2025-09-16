@@ -220,20 +220,39 @@
       flex-wrap: wrap;
       justify-content: flex-start;
       list-style-type: none;
-      gap: 10px;
 
       li {
         margin: 0;
         flex: 0 0 auto;
+        position: relative;
+        &:before {
+          content: '';
+          width: 1px;
+          height: 16px;
+          background-color: #6a3906;
+          position: absolute;
+          left: 0;
+          top: 0;
+        }
+        &:first-child {
+          &:before {
+            display: none;
+          }
+        }
       }
     }
 
     a {
       text-decoration: none;
-      color: #996c33;
+      color: #6a3906;
+      padding: 0 16px;
+      display: block;
       &:hover {
         color: $colorPrimary;
         text-decoration: underline;
+      }
+      &:visited {
+        color: #996c33;
       }
     }
     @include screen('tablet') {

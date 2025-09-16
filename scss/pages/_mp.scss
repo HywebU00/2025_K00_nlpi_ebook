@@ -82,6 +82,9 @@
   color: $colorPrimaryDark;
   font-weight: 500;
   line-height: 1.7;
+  @include screen('mobile') {
+    margin-bottom: 20px;
+  }
 }
 // 首頁大圖輪播
 .mpSlider {
@@ -231,23 +234,18 @@ section:has(.marqueeSlider) {
   background-color: $colorPrimary !important;
   color: #fff;
 }
-.marqueeSlider {
-  position: relative;
-  .closebtn {
-    position: absolute;
-    left: 0;
-    top: 50%;
-    transform: translateY(-50%);
-  }
-}
+
 // 推薦好書
 section:has(.recommendedBooks) {
   padding: 110px 0 180px;
   background-image: url('../images/curveBg01.png'), radial-gradient(circle 35vw at 0% 20%, rgba(251, 202, 189, 0.7) 0%, rgba(251, 202, 189, 0.1) 100%), radial-gradient(circle 50vw at 100% 90%, rgba(251, 202, 189, 0.7) 0%, rgba(251, 202, 189, 0.1) 100%),
     radial-gradient(circle 25vw at 0% 90%, rgba(251, 202, 189, 0.6) 0%, rgba(251, 202, 189, 0) 100%);
-
   background-repeat: no-repeat;
   background-position: right top, left top, right bottom, left bottom;
+  transition: 0.5s;
+  @include screen('mobile') {
+    padding: 40px 0 100px;
+  }
 }
 .recommendedBooks {
   .sectionTitle {
@@ -415,20 +413,20 @@ section:has(.themedBookfair) {
     z-index: -1;
     border-radius: 50% 80% 0 0 / 6% 0 0 0;
   }
-  // background: linear-gradient(90deg, rgba(246, 207, 194, 0.28) 0%, rgba(246, 207, 194, 0.82) 23%, rgba(246, 207, 194, 0.8) 23%, rgba(246, 207, 194, 0) 23%, rgba(246, 207, 194, 0) 100%),
-  //   linear-gradient(90deg, rgba(250, 204, 189, 0) 0%, rgba(250, 204, 189, 0) 23%, rgba(250, 204, 189, 0.9) 23%, rgba(250, 204, 189, 0.9) 65%, rgba(250, 204, 189, 0.1) 100%);
 
+  @include screen('mobile') {
+    padding: 0px 0 40px;
+    &:before {
+      display: none;
+    }
+    &:after {
+      width: 100vw;
+      border-radius: 50% 180% 0 0 / 6% 0 0 0;
+      top: -60px;
+    }
+  }
   .container {
     position: relative;
-    // &:before {
-    //   content: '';
-    //   background-image: url('../images/themedBookfair_bg.png');
-    //   background-position: center top;
-    //   background-repeat: no-repeat;
-    //   height: 137px;
-    //   position: absolute;
-    //   top: -137px;
-    // }
   }
 }
 .themedBookfair {
@@ -459,9 +457,13 @@ section:has(.themedBookfair) {
       }
       .time {
         font-size: Rem(16);
-        margin-bottom: 15px;
+        margin-bottom: 10px;
         color: $colorPrimaryDark;
         font-weight: 500;
+        line-height: 1.5;
+        span {
+          display: inline-block;
+        }
       }
       p {
         font-size: Rem(18);
@@ -568,11 +570,9 @@ section:has(.themedBookfair) {
     margin-bottom: 50px;
     transition: 0.5s;
     @media (max-width: 630px) {
-      padding: 45px 30px;
+      padding: 30px 30px;
     }
-    @media (max-width: 430px) {
-      padding: 40px 30px;
-    }
+
     .bookfairlistSwiperBox {
       .swiper-slide {
         .bookfairlist {
@@ -587,6 +587,8 @@ section:has(.themedBookfair) {
               overflow: hidden;
               margin-bottom: 20px;
               position: relative;
+              transition: 0.5s;
+              box-shadow: 0 0 6px rgba(0, 0, 0, 0.1);
               img {
                 aspect-ratio: 3/4.26;
                 width: 100%;
@@ -606,9 +608,18 @@ section:has(.themedBookfair) {
               color: $colorPrimaryDark;
               font-weight: 500;
               line-height: 1.5;
+              span {
+                display: inline-block;
+                em {
+                  font-style: normal;
+                  display: inline-block;
+                }
+              }
             }
             &:hover {
-              box-shadow: 0 0 0 4px #fff;
+              .pic {
+                transform: scale(1.04);
+              }
             }
           }
         }
@@ -632,6 +643,9 @@ section:has(.popularBooks) {
     radial-gradient(circle 45vw at 0% 90%, rgba(251, 196, 180, 0.9) 0%, rgba(251, 196, 180, 0) 100%), radial-gradient(circle 25vw at 100% 100%, rgba(251, 196, 180, 0.7) 0%, rgba(251, 196, 180, 0) 100%);
   background-repeat: no-repeat;
   background-position: left top, right -3.64vw bottom 110px, right top, left top, left top, right bottom;
+  @include screen('mobile') {
+    padding: 40px 0 60px;
+  }
 }
 .popularBooks {
   .sectionTitle {
@@ -698,10 +712,17 @@ section:has(.popularBooks) {
         margin-bottom: 25px;
         font-family: 'NotoSerifHK', serif;
       }
+      .content {
+        margin-bottom: 30px;
+        height: 11em;
+        @include screen('tablet') {
+          height: auto;
+        }
+      }
       p {
         text-align: left;
-        font-size: Rem(22);
-        margin-bottom: 30px;
+        font-size: Rem(21);
+        margin: 0;
       }
       .learnBtn,
       .searchmoreBtn {
@@ -745,11 +766,15 @@ section:has(.popularBooks) {
         }
       }
     }
-    // .customAreaBlock p {
-    //   @include lineClamp(5);
-    //   line-height: 1.7em;
-    //   height: calc(1.7em * 5);
-    // }
+    .customAreaBlock p {
+      @include lineClamp(4);
+      line-height: 1.7em;
+      height: calc(1.7em * 4);
+      @include screen('tablet') {
+        height: auto;
+        display: block !important;
+      }
+    }
     .customAreaBlock {
       background-image: url('../images/customAreaBlock_bg.jpg');
       background-position: center;
@@ -898,6 +923,9 @@ section:has(.newBooks) {
   background-repeat: no-repeat;
   background-position: center top;
   background-size: cover;
+  @include screen('mobile') {
+    padding: 40px 0 60px;
+  }
 }
 .newBooks {
   .sectionTitle {
@@ -918,6 +946,9 @@ section:has(.audioBooks) {
   background-image: url('../images/curveBg04.png'), radial-gradient(circle 55vw at 0% 0%, rgba(246, 163, 139, 0.9) 0%, rgba(246, 163, 139, 0.1) 100%);
   background-repeat: no-repeat;
   background-position: right top, left top;
+  @include screen('mobile') {
+    padding: 40px 0 60px;
+  }
 }
 .audioBooks {
   .sectionTitle {
@@ -936,6 +967,9 @@ section:has(.partnerLibraries) {
   background: linear-gradient(180deg, rgba(252, 200, 185, 0.67) 0%, rgba(252, 200, 185, 0) 100%);
   background-repeat: no-repeat;
   background-position: center top;
+  @include screen('mobile') {
+    padding: 40px 0 60px;
+  }
 }
 .partnerLibraries {
   .sectionTitle {

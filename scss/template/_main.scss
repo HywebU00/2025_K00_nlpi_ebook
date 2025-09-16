@@ -23,6 +23,7 @@ main {
     border-radius: 5px;
     width: 32px;
     height: 32px;
+    padding: 0;
     &:hover {
       background-color: rgba(0, 0, 0, 0.3);
     }
@@ -42,6 +43,7 @@ main {
     text-decoration: none;
     border-radius: 50px;
     transition: 0.5s;
+    text-align: center;
     &:hover {
       background: #40221d;
       background: linear-gradient(180deg, rgba(64, 34, 29, 1) 17%, rgba(112, 86, 67, 1) 100%);

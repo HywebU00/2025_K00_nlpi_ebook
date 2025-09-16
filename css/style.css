@@ -6219,19 +6219,36 @@ header .topNav {
   flex-wrap: wrap;
   justify-content: flex-start;
   list-style-type: none;
-  gap: 10px;
 }
 .webSearch .hotKeyword ul li {
   margin: 0;
   flex: 0 0 auto;
+  position: relative;
+}
+.webSearch .hotKeyword ul li:before {
+  content: "";
+  width: 1px;
+  height: 16px;
+  background-color: #6a3906;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.webSearch .hotKeyword ul li:first-child:before {
+  display: none;
 }
 .webSearch .hotKeyword a {
   text-decoration: none;
-  color: #996c33;
+  color: #6a3906;
+  padding: 0 16px;
+  display: block;
 }
 .webSearch .hotKeyword a:hover {
   color: #ea5514;
   text-decoration: underline;
+}
+.webSearch .hotKeyword a:visited {
+  color: #996c33;
 }
 @media screen and (max-width: 991px) {
   .webSearch .hotKeyword {
@@ -7930,12 +7947,13 @@ button.autoPlaySwitch:hover {
   text-align: left;
   position: relative;
   min-height: 1px;
-  padding-left: 40px;
   box-sizing: border-box;
-}
-.marqueeSlider:has(.swiperArrow) {
   display: flex;
-  gap: 20px;
+  flex-wrap: nowrap;
+  align-items: center;
+}
+.marqueeSlider .closebtn {
+  flex: 0 0 auto;
 }
 .marqueeSlider .swiperBox {
   margin-top: 0;
@@ -7944,6 +7962,7 @@ button.autoPlaySwitch:hover {
   background-image: url("../images/icon_notice.png");
   background-repeat: no-repeat;
   background-position: left 15px center;
+  outline: 1px solid red;
 }
 .marqueeSlider .swiper {
   padding: 0;
@@ -8003,7 +8022,7 @@ button.autoPlaySwitch:hover {
   text-overflow: ellipsis;
   text-decoration: none;
   color: #fff;
-  padding: 3px 0;
+  padding: 3px 80px 3px 0;
 }
 .marqueeSlider a:hover {
   text-decoration: underline;
@@ -8238,6 +8257,7 @@ main {
   border-radius: 5px;
   width: 32px;
   height: 32px;
+  padding: 0;
 }
 .closebtn a:hover {
   background-color: rgba(0, 0, 0, 0.3);
@@ -8258,6 +8278,7 @@ main {
   text-decoration: none;
   border-radius: 50px;
   transition: 0.5s;
+  text-align: center;
 }
 .moreBtn a:hover {
   background: #40221d;
@@ -8555,6 +8576,11 @@ footer .copyrightBox .footerLink li a:hover {
   font-weight: 500;
   line-height: 1.7;
 }
+@media screen and (max-width: 767px) {
+  .partnerLibraries .sectionSubtitle, .audioBooks .sectionSubtitle, .newBooks .sectionSubtitle, .recommendedBooks .sectionSubtitle {
+    margin-bottom: 20px;
+  }
+}
 
 .mpSlider .swiper-slide .slidecontent {
   position: relative;
@@ -8707,21 +8733,17 @@ section:has(.marqueeSlider) {
   color: #fff;
 }
 
-.marqueeSlider {
-  position: relative;
-}
-.marqueeSlider .closebtn {
-  position: absolute;
-  left: 0;
-  top: 50%;
-  transform: translateY(-50%);
-}
-
 section:has(.recommendedBooks) {
   padding: 110px 0 180px;
   background-image: url("../images/curveBg01.png"), radial-gradient(circle 35vw at 0% 20%, rgba(251, 202, 189, 0.7) 0%, rgba(251, 202, 189, 0.1) 100%), radial-gradient(circle 50vw at 100% 90%, rgba(251, 202, 189, 0.7) 0%, rgba(251, 202, 189, 0.1) 100%), radial-gradient(circle 25vw at 0% 90%, rgba(251, 202, 189, 0.6) 0%, rgba(251, 202, 189, 0) 100%);
   background-repeat: no-repeat;
   background-position: right top, left top, right bottom, left bottom;
+  transition: 0.5s;
+}
+@media screen and (max-width: 767px) {
+  section:has(.recommendedBooks) {
+    padding: 40px 0 100px;
+  }
 }
 
 .booksSwiperBox {
@@ -8882,6 +8904,19 @@ section:has(.themedBookfair):after {
   z-index: -1;
   border-radius: 50% 80% 0 0/6% 0 0 0;
 }
+@media screen and (max-width: 767px) {
+  section:has(.themedBookfair) {
+    padding: 0px 0 40px;
+  }
+  section:has(.themedBookfair):before {
+    display: none;
+  }
+  section:has(.themedBookfair):after {
+    width: 100vw;
+    border-radius: 50% 180% 0 0/6% 0 0 0;
+    top: -60px;
+  }
+}
 section:has(.themedBookfair) .container {
   position: relative;
 }
@@ -8912,9 +8947,13 @@ section:has(.themedBookfair) .container {
 }
 .themedBookfair .bookfairBox .leftBox .time {
   font-size: 1rem;
-  margin-bottom: 15px;
+  margin-bottom: 10px;
   color: rgb(163.8, 59.5, 14);
   font-weight: 500;
+  line-height: 1.5;
+}
+.themedBookfair .bookfairBox .leftBox .time span {
+  display: inline-block;
 }
 .themedBookfair .bookfairBox .leftBox p {
   font-size: 1.125rem;
@@ -9010,12 +9049,7 @@ section:has(.themedBookfair) .container {
 }
 @media (max-width: 630px) {
   .themedBookfair .bookfairlistBox {
-    padding: 45px 30px;
-  }
-}
-@media (max-width: 430px) {
-  .themedBookfair .bookfairlistBox {
-    padding: 40px 30px;
+    padding: 30px 30px;
   }
 }
 .themedBookfair .bookfairlistBox .bookfairlistSwiperBox .swiper-slide .bookfairlist {
@@ -9031,6 +9065,8 @@ section:has(.themedBookfair) .container {
   overflow: hidden;
   margin-bottom: 20px;
   position: relative;
+  transition: 0.5s;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.1);
 }
 .themedBookfair .bookfairlistBox .bookfairlistSwiperBox .swiper-slide .bookfairlist a .pic img {
   aspect-ratio: 3/4.26;
@@ -9051,8 +9087,15 @@ section:has(.themedBookfair) .container {
   font-weight: 500;
   line-height: 1.5;
 }
-.themedBookfair .bookfairlistBox .bookfairlistSwiperBox .swiper-slide .bookfairlist a:hover {
-  box-shadow: 0 0 0 4px #fff;
+.themedBookfair .bookfairlistBox .bookfairlistSwiperBox .swiper-slide .bookfairlist a .time span {
+  display: inline-block;
+}
+.themedBookfair .bookfairlistBox .bookfairlistSwiperBox .swiper-slide .bookfairlist a .time span em {
+  font-style: normal;
+  display: inline-block;
+}
+.themedBookfair .bookfairlistBox .bookfairlistSwiperBox .swiper-slide .bookfairlist a:hover .pic {
+  transform: scale(1.04);
 }
 .themedBookfair .bookfairlistBox .bookfairlistSwiperBox .swiperArrow.swiperPrev {
   left: -2.08vw;
@@ -9066,6 +9109,11 @@ section:has(.popularBooks) {
   background-image: url("../images/curveBg02.png"), url("../images/curveBg03.png"), radial-gradient(circle 35vw at 90% 0%, rgba(251, 196, 180, 0.9) 0%, rgba(251, 196, 180, 0.1) 100%), radial-gradient(circle 45vw at 0% 50%, rgba(251, 196, 180, 0.9) 0%, rgba(251, 196, 180, 0) 100%), radial-gradient(circle 45vw at 0% 90%, rgba(251, 196, 180, 0.9) 0%, rgba(251, 196, 180, 0) 100%), radial-gradient(circle 25vw at 100% 100%, rgba(251, 196, 180, 0.7) 0%, rgba(251, 196, 180, 0) 100%);
   background-repeat: no-repeat;
   background-position: left top, right -3.64vw bottom 110px, right top, left top, left top, right bottom;
+}
+@media screen and (max-width: 767px) {
+  section:has(.popularBooks) {
+    padding: 40px 0 60px;
+  }
 }
 
 .popularBooks .sectionTitle {
@@ -9136,11 +9184,22 @@ section:has(.popularBooks) {
   margin-bottom: 25px;
   font-family: "NotoSerifHK", serif;
 }
+.popularBooks .relatedbooksMater .customAreaBlock .content,
+.popularBooks .relatedbooksMater .appropriateageBlock .content {
+  margin-bottom: 30px;
+  height: 11em;
+}
+@media screen and (max-width: 991px) {
+  .popularBooks .relatedbooksMater .customAreaBlock .content,
+  .popularBooks .relatedbooksMater .appropriateageBlock .content {
+    height: auto;
+  }
+}
 .popularBooks .relatedbooksMater .customAreaBlock p,
 .popularBooks .relatedbooksMater .appropriateageBlock p {
   text-align: left;
-  font-size: 1.375rem;
-  margin-bottom: 30px;
+  font-size: 1.3125rem;
+  margin: 0;
 }
 .popularBooks .relatedbooksMater .customAreaBlock .learnBtn,
 .popularBooks .relatedbooksMater .customAreaBlock .searchmoreBtn,
@@ -9186,6 +9245,20 @@ section:has(.popularBooks) {
   background-image: url("../images/basic/icon/search_w.svg");
   background-position: left 2px;
   background-size: 22px;
+}
+.popularBooks .relatedbooksMater .customAreaBlock p {
+  -webkit-line-clamp: 4;
+  display: -webkit-box !important;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  line-height: 1.7em;
+  height: 6.8em;
+}
+@media screen and (max-width: 991px) {
+  .popularBooks .relatedbooksMater .customAreaBlock p {
+    height: auto;
+    display: block !important;
+  }
 }
 .popularBooks .relatedbooksMater .customAreaBlock {
   background-image: url("../images/customAreaBlock_bg.jpg");
@@ -9337,6 +9410,11 @@ section:has(.newBooks) {
   background-position: center top;
   background-size: cover;
 }
+@media screen and (max-width: 767px) {
+  section:has(.newBooks) {
+    padding: 40px 0 60px;
+  }
+}
 
 .newBooks .booksSwiperBox .swiper {
   -webkit-mask-image: linear-gradient(90deg, transparent 0%, rgb(0, 0, 0) 20% 80%, transparent 100%);
@@ -9349,6 +9427,11 @@ section:has(.audioBooks) {
   background-repeat: no-repeat;
   background-position: right top, left top;
 }
+@media screen and (max-width: 767px) {
+  section:has(.audioBooks) {
+    padding: 40px 0 60px;
+  }
+}
 
 section:has(.partnerLibraries) {
   padding: 110px 0 100px;
@@ -9356,6 +9439,11 @@ section:has(.partnerLibraries) {
   background: linear-gradient(180deg, rgba(252, 200, 185, 0.67) 0%, rgba(252, 200, 185, 0) 100%);
   background-repeat: no-repeat;
   background-position: center top;
+}
+@media screen and (max-width: 767px) {
+  section:has(.partnerLibraries) {
+    padding: 40px 0 60px;
+  }
 }
 
 .partnerLibraries .librariesSwiperBox {

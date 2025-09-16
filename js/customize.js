@@ -172,19 +172,10 @@ window.addEventListener('DOMContentLoaded', () => {
         swiperA11Fn(swiper);
       },
     },
-    // 切換點
-    pagination: {
-      el: '.mpSlider .swiperPagination',
-      clickable: true,
-    },
+
     effect: 'fade', //淡入
     fadeEffect: {
       crossFade: true, //上一筆淡出，false上一筆不淡出，下一筆疊在上方
-    },
-    // 切換點
-    pagination: {
-      el: '.marqueeSlider .swiperPagination',
-      clickable: true,
     },
   });
 
