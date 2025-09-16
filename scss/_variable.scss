@@ -22,6 +22,8 @@ $colorDisabled: #dee0e3;
 $colorError: #c83d36;
 $checkboxRadio: #97a3b6;
 $colorAccessibility: #c40000;
+$colorgreen: #7e9a47;
+$colorbluepurple: #5f779f;
 
 // nav顏色設定
 $surface: $colorPrimary;
@@ -47,6 +49,8 @@ $btnNormalLightHover: #f1f1f1;
 $btnDisabled: $colorDisabled;
 $btnDisabledOutline: #97a3b6;
 
+$btngreenHover: color.mix($colorgreen, #000, 80%);
+$btnbluepurpleHover: color.mix($colorbluepurple, #000, 80%);
 // notice
 $noticeNormalGWord: #333;
 $noticeNormalGBg: #dee0e3;

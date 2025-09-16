@@ -4293,12 +4293,78 @@ button.active, button:hover {
   align-items: center;
 }
 
+.btngreen {
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  white-space: nowrap;
+  width: -moz-fit-content;
+  width: fit-content;
+  cursor: pointer;
+  margin: 0;
+  padding: 6px 18px;
+  border: none;
+  border-radius: var(--borderRadius4);
+  font-weight: 400;
+  gap: 6px;
+  line-height: 2;
+  text-decoration: none;
+  background: #7e9a47;
+  transition: all 0.5s ease;
+}
+.btngreen.active, .btngreen:hover {
+  color: #fff;
+  background: rgb(100.8, 123.2, 56.8);
+}
+
+.bluepurple {
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  white-space: nowrap;
+  width: -moz-fit-content;
+  width: fit-content;
+  cursor: pointer;
+  margin: 0;
+  padding: 6px 18px;
+  border: none;
+  border-radius: var(--borderRadius4);
+  font-weight: 400;
+  gap: 6px;
+  line-height: 2;
+  text-decoration: none;
+  background: #5f779f;
+  transition: all 0.5s ease;
+}
+.bluepurple.active, .bluepurple:hover {
+  color: #fff;
+  background: rgb(76, 95.2, 127.2);
+}
+
 .borrowingbtn {
   background-image: url("../images/icon_book01.svg");
   background-repeat: no-repeat;
   background-position: left top 10px;
   padding-left: 30px;
   background-size: 22px 20px;
+}
+
+.reservebtn {
+  background-image: url("../images/icon_reserve.svg");
+  background-repeat: no-repeat;
+  background-position: left top 8px;
+  padding-left: 30px;
+  background-size: 20px 20px;
+}
+
+.recbuybtn {
+  background-image: url("../images/icon_recbuy.svg");
+  background-repeat: no-repeat;
+  background-position: left top 8px;
+  padding-left: 30px;
+  background-size: 20px 20px;
 }
 
 .popupB,
