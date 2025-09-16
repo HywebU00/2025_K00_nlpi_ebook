@@ -938,6 +938,13 @@ section:has(.newBooks) {
     .swiper {
       mask-image: linear-gradient(90deg, transparent 0%, rgb(0, 0, 0) 20% 80%, transparent 100%);
     }
+    .swiperPagination .swiper-pagination-bullet {
+      background: #999;
+      &.swiper-pagination-bullet-active {
+        background: $colorSecondaryDark;
+        width: 50px;
+      }
+    }
   }
 }
 // 有聲書

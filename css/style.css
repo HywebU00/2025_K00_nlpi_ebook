@@ -6735,7 +6735,7 @@ header .topNav {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  gap: 8px;
+  gap: 5px;
 }
 #mobileMenu .navButton .logoIn,
 #mobileMenu .navButton .personalStudyBtn,
@@ -6750,9 +6750,9 @@ header .topNav {
 #mobileMenu .navButton .borrowingListBtn button.btnPrimary,
 #mobileMenu .navButton .backfrontpageBtn button.btnPrimary {
   line-height: 1;
-  padding: 10px 18px;
+  padding: 8px 18px;
   border-radius: 50px;
-  background-color: #666;
+  background-color: #613c33;
 }
 #mobileMenu .navButton .logoIn button.btnPrimary span,
 #mobileMenu .navButton .personalStudyBtn button.btnPrimary span,
@@ -6980,6 +6980,7 @@ header .topNav {
   text-align: center;
   padding: 20px 16px 25px;
   display: block;
+  transition: 0s;
 }
 .megaMenu > ul > li > a:hover, .megaMenu > ul > li > button:hover {
   color: #ea5514;
@@ -7012,6 +7013,11 @@ header .topNav {
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 15px;
   border-radius: 0 0 10px 10px;
 }
+@media screen and (max-width: 575px) {
+  .megaMenu > ul > li > ul {
+    max-width: 70vw;
+  }
+}
 .megaMenu > ul > li > ul a {
   padding: 8px 15px;
   display: block;
@@ -7027,7 +7033,7 @@ header .topNav {
   padding-bottom: 20px;
 }
 .megaMenu > ul > li > ul > li a {
-  font-size: 1.25rem;
+  font-size: 1.1875rem;
   font-weight: 600;
   padding: 20px 15px 12px 50px;
   text-align: left;
@@ -7230,6 +7236,7 @@ header .topNav {
   align-items: center;
   justify-content: center;
   gap: 10px;
+  flex-wrap: wrap;
 }
 .swiperPagination .swiper-pagination-bullet {
   margin: 0 !important;
@@ -9419,6 +9426,13 @@ section:has(.newBooks) {
 .newBooks .booksSwiperBox .swiper {
   -webkit-mask-image: linear-gradient(90deg, transparent 0%, rgb(0, 0, 0) 20% 80%, transparent 100%);
           mask-image: linear-gradient(90deg, transparent 0%, rgb(0, 0, 0) 20% 80%, transparent 100%);
+}
+.newBooks .booksSwiperBox .swiperPagination .swiper-pagination-bullet {
+  background: #999;
+}
+.newBooks .booksSwiperBox .swiperPagination .swiper-pagination-bullet.swiper-pagination-bullet-active {
+  background: rgb(87.3, 54, 45.9);
+  width: 50px;
 }
 
 section:has(.audioBooks) {
