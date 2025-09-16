@@ -67,7 +67,7 @@
   padding-top: 70px;
   background-repeat: no-repeat;
   background-position: center top;
-  font-family: 'NotoSerifHK', serif;
+  font-family: 'Noto Serif TC', serif;
   font-size: Rem(36);
   color: $colorSecondaryDark;
   letter-spacing: 0.15em;
@@ -144,7 +144,7 @@
         padding: 10px 5px;
         line-height: 1.4em;
         text-shadow: 0px 3px 13px #1b1b1b;
-        font-family: 'NotoSerifHK', serif;
+        font-family: 'Noto Serif TC', serif;
         @include lineClamp(2);
       }
       p {
@@ -708,9 +708,10 @@ section:has(.popularBooks) {
       .title {
         color: $colorWordDark;
         font-size: Rem(36);
-        font-weight: 500;
         margin-bottom: 25px;
-        font-family: 'NotoSerifHK', serif;
+        font-family: 'Huninn', sans-serif;
+        font-weight: 400;
+        font-style: normal;
       }
       .content {
         margin-bottom: 30px;

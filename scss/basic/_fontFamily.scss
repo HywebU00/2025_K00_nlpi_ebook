@@ -97,13 +97,25 @@
   /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
 
+// 明體
 @font-face {
   font-display: swap;
   /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-  font-family: 'NotoSerifHK';
-  font-optical-sizing: auto;
+  font-family: 'Noto Serif TC';
+  font-display: swap;
   font-weight: 600;
   font-style: normal;
-  src: url('../assets/static/NotoSerifHK-SemiBold.ttf') format('truetype');
+  src: url('../assets/static/NotoSerifTC-SemiBold.ttf') format('truetype');
+  /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+//圓體
+@font-face {
+  font-display: swap;
+  /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Huninn';
+  font-display: swap;
+  font-weight: 400;
+  font-style: normal;
+  src: url('../assets/Huninn/Huninn-Regular.ttf') format('truetype');
   /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }

@@ -2532,11 +2532,21 @@ template {
 @font-face {
   font-display: swap;
   /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-  font-family: "NotoSerifHK";
-  font-optical-sizing: auto;
+  font-family: "Noto Serif TC";
+  font-display: swap;
   font-weight: 600;
   font-style: normal;
-  src: url("../assets/static/NotoSerifHK-SemiBold.ttf") format("truetype");
+  src: url("../assets/static/NotoSerifTC-SemiBold.ttf") format("truetype");
+  /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+@font-face {
+  font-display: swap;
+  /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Huninn";
+  font-display: swap;
+  font-weight: 400;
+  font-style: normal;
+  src: url("../assets/Huninn/Huninn-Regular.ttf") format("truetype");
   /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
 :root {
@@ -8567,7 +8577,7 @@ footer .copyrightBox .footerLink li a:hover {
   padding-top: 70px;
   background-repeat: no-repeat;
   background-position: center top;
-  font-family: "NotoSerifHK", serif;
+  font-family: "Noto Serif TC", serif;
   font-size: 2.25rem;
   color: rgb(87.3, 54, 45.9);
   letter-spacing: 0.15em;
@@ -8654,7 +8664,7 @@ footer .copyrightBox .footerLink li a:hover {
   padding: 10px 5px;
   line-height: 1.4em;
   text-shadow: 0px 3px 13px #1b1b1b;
-  font-family: "NotoSerifHK", serif;
+  font-family: "Noto Serif TC", serif;
   -webkit-line-clamp: 2;
   display: -webkit-box !important;
   -webkit-box-orient: vertical;
@@ -9187,9 +9197,10 @@ section:has(.popularBooks) {
 .popularBooks .relatedbooksMater .appropriateageBlock .title {
   color: #333333;
   font-size: 2.25rem;
-  font-weight: 500;
   margin-bottom: 25px;
-  font-family: "NotoSerifHK", serif;
+  font-family: "Huninn", sans-serif;
+  font-weight: 400;
+  font-style: normal;
 }
 .popularBooks .relatedbooksMater .customAreaBlock .content,
 .popularBooks .relatedbooksMater .appropriateageBlock .content {
