@@ -438,6 +438,48 @@
     }
   }
 }
+.logoSticky {
+  display: none;
+}
+header {
+  &.sticky {
+    .mainMenu {
+      @include screen(tablet) {
+        display: none;
+      }
+      .container {
+        display: flex;
+        align-items: center;
+        .logoSticky {
+          flex: 0 0 auto;
+          flex-basis: 20%;
+          max-width: 20%;
+          display: block;
+          margin-right: 20px;
+          img {
+            width: 100%;
+          }
+        }
+        .megaMenu {
+          & > ul {
+            & > li {
+              & > a,
+              & > button {
+                //第一層按鈕
+                padding: 20px 5px 25px;
+              }
+              &:first-child {
+                > a {
+                  padding: 20px 5px 25px 50px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
 // 電腦版選單 一般 --------------------------------------------------------
 .menu {
   width: 100%;

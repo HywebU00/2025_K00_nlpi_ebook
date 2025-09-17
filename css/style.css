@@ -6909,6 +6909,36 @@ header .topNav {
   }
 }
 
+.logoSticky {
+  display: none;
+}
+
+@media screen and (max-width: 991px) {
+  header.sticky .mainMenu {
+    display: none;
+  }
+}
+header.sticky .mainMenu .container {
+  display: flex;
+  align-items: center;
+}
+header.sticky .mainMenu .container .logoSticky {
+  flex: 0 0 auto;
+  flex-basis: 20%;
+  max-width: 20%;
+  display: block;
+  margin-right: 20px;
+}
+header.sticky .mainMenu .container .logoSticky img {
+  width: 100%;
+}
+header.sticky .mainMenu .container .megaMenu > ul > li > a, header.sticky .mainMenu .container .megaMenu > ul > li > button {
+  padding: 20px 5px 25px;
+}
+header.sticky .mainMenu .container .megaMenu > ul > li:first-child > a {
+  padding: 20px 5px 25px 50px;
+}
+
 .menu {
   width: 100%;
   position: relative;
