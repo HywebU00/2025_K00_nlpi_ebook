@@ -296,6 +296,11 @@ function mainMenu(obj) {
           $headTop.removeAttr('style');
         }
       });
+      $(window).on('resize', function () {
+        if ($(window).width() < setRWDWidth) {
+          $header.removeClass('sticky');
+        }
+      });
     }
 
     $menu.on('mouseenter', '.hasChild', _handleMouseenter);
